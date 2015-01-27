@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>HCI Project Portfolio</title>	
+	<title>Textbook App</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,89 +23,14 @@
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div class="jumbotron">
-			<h1>Michael Bernstein</h1>
-			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
-			<button id="testjs" class="btn btn-primary btn-lg">Test Javascript</button>
+			<h1>Textbook App</h1>
 		</div>
-
-
-		<h4>Projects</h4>
-		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		<div class="project" id="project1">
-			<a href="" class="thumbnail">
-				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Waiting in Line</p>
-			</a>
-		</div>
-		<div class="project" id="project2">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.city.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Needfinding</p>
-			</a>
-		</div>
-		<div class="project" id="project3">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.technics.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Prototyping</p>
-			</a>
-		</div>
-		<div class="project" id="project4">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.abstract.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Heuristic Evaluation</p>
-			</a>
-		</div>
-		<div class="project" id="project5">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.abstract.8.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Visualization</p>
-			</a>
-		</div>
-		<div class="project" id="project6">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.people.2.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Social design</p>
-			</a>
-		</div>
-		<div class="project" id="project7">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.technics.2.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Gestural interaction</p>
-			</a>
-		</div>
-		<div class="project" id="project8">
-			<a href="#" class="thumbnail">
-				<img src="images/lorempixel.city.2.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Design tools</p>
-			</a>
-		</div>
+		<form action="buy.html">
+        <button id="BuyButton" class="btn btn-primary btn-lg">Buy</button> </form><br>
+		<form action="sell.html"><button id="SellButton" class="btn btn-primary btn-lg">Sell</button></form> <br>
+		<form action="messages.html"><button id="MessagesButton" class="btn btn-primary btn-lg">My Messages</button></form>
 	</div>
-  <form id="projectForm" role="form">
-    <div class="form-group">
-      <label for="project">Please change the project:</label>
-      <select class="form-control" id="project">
-        <option value="#project1">Waiting in line</option>
-        <option value="#project2">Needfinding</option>
-        <option value="#project3">Prototyping</option>
-        <option value="#project4">Heuristic evaluation</option>
-        <option value="#project5">Visualization</option>
-        <option value="#project6">Social design</option>
-        <option value="#project7">Gestural interaction</option>
-        <option value="#project8">Design tools</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="width">To width (in pixels):</label>
-      <input type="number" class="form-control" id="width" placeholder="Width">
-    </div>
-    <div class="form-group">
-      <label for="description">And to description:</label>
-      <input type="text" class="form-control" id="description" placeholder="Project desicription">
-    </div>
-    <button id="submitBtn" type="button" class="btn btn-default">Submit</button>
-  </form>
+
 	
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
