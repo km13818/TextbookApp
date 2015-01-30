@@ -23,7 +23,7 @@ body {
 
 .jumbotron:after {
      content:"";
-     background: url("../images/lorempixel.jumbotron.jpeg");
+     background: url("../images/brbs-e.jpg");
      opacity: 0.2;
      top: 0;
      left: 0;
