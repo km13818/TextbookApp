@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Textbook App</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/introHCI.css" rel="stylesheet">
+	<!-- this is a comment in HTML -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->        
+</head>
+
+<body>
+	<div align="right">
+		Logged in as {{username}} <br>
+		<button id="Logout" class="btn btn-default btn-sm">Logout</button>
+	</div>
+	<div class="container">
+		<div align="center">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+			<div class="jumbotron">
+				<h1>Triton Textbook Exchange </h1>
+			</div>
+			<form method="POST" action="buy">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="BuyButton" class="btn btn-primary btn-lg">Buy</button>
+			</form> <br>
+			<form method="POST" action="sell">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="SellButton" class="btn btn-primary btn-lg">Sell</button>
+			</form> <br>
+			<form action="messages.html"><button id="MessagesButton" class="btn btn-primary btn-lg">My Messages</button></form>
+		</div>
+	</div>
+
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/introHCI.js"></script>
+</body>
+
+
+
+</html>
+
