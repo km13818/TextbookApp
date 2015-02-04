@@ -9,9 +9,9 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var project = require('./routes/project');
+
 var login = require('./routes/login');
-var sell = require('./routes/sell');
+/*var sell = require('./routes/sell');*/
 // Example route
 // var user = require('./routes/user');
 
@@ -60,12 +60,28 @@ app.post('/postOffer', function(req, res){
     console.log("Logged in as: " + username);
     res.render( "index", { 'username':username } );
 });
-app.post('/searchOffers', function(req, res){
+app.post('/display_offers', function(req, res){
     var username = req.param('username');
     console.log("Logged in as: " + username);
-    res.render( "buy", { 'username':username } );
+    res.render( "currentoffers", { 'username':username } );
+});
+//TODO: append offers to request
+app.post('/search_offers', function(req, res){
+    var username = req.param('username');
+    console.log("Logged in as: " + username);
+    res.render( "currentoffers", { 'username':username } );
 });
 
+app.post('/inbox', function(req, res){
+    var username = req.param('username');
+    console.log("Logged in as: " + username);
+    res.render( "inbox", { 'username':username } );
+});
+app.post('/my_offers', function(req, res){
+    var username = req.param('username');
+    console.log("Logged in as: " + username);
+    res.render( "myoffers", { 'username':username } );
+});
 
 // Example route
 // app.get('/users', user.list);

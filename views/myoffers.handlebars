@@ -26,33 +26,9 @@
 		</form>
 		<input type="button" class="btn btn-sm" onclick="history.back();" value="Back">
 	</div>
-	<div align="center">
-		<h4>Search by: </h4>
-		<form method="POST" action="search_offers">
-			Title: <input type="text" name="title"> <br>
-			Author: <input type="text" name="author"> <br>
-			ISBN: <input type="text" name="isbn"> <br>
-			Course: <input type="text" name="course"> <br>
+	<h4 align="center">Purchases </h4>
+	<h4 align="center">Sales </h4>
 
-			<input type="hidden" name="username" value="{{username}}"> 
-			<button id="PostOfferButton" class="btn btn-primary" >Search</button>
-
-		</form>
-		<form method="POST" action="display_offers">
-			<input type="hidden" name="username" value="{{username}}"> 
-			<button id="ViewAllOffersButton" class="btn btn-primary" >View all offers</button>
-		</form>
-	<div>
-	<br>
-
-
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/introHCI.js"></script>
 </body>
 
-
-
 </html>
-<script>
-</script>

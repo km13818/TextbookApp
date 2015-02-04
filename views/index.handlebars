@@ -21,12 +21,13 @@
 <body>
 	<div align="right">
 		Logged in as {{username}} <br>
-		<button id="Logout" class="btn btn-default btn-sm">Logout</button>
+		<form method="GET" action="/">
+			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
+		</form>
 	</div>
 	<div class="container">
 		<div align="center">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
+
 			<div class="jumbotron">
 				<h1>Triton Textbook Exchange </h1>
 			</div>
@@ -38,7 +39,14 @@
 				<input type="hidden" name="username" value="{{username}}"> 
 				<button id="SellButton" class="btn btn-primary btn-lg">Sell</button>
 			</form> <br>
-			<form action="messages.html"><button id="MessagesButton" class="btn btn-primary btn-lg">My Messages</button></form>
+			<form method="POST" action="inbox">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="InboxButton" class="btn btn-primary btn-lg">Messages</button>
+			</form> <br>
+			<form method="POST" action="my_offers">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="InboxButton" class="btn btn-primary btn-lg">My Offers/Transactions</button>
+			</form>
 		</div>
 	</div>
 

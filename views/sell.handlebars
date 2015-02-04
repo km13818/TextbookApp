@@ -19,14 +19,25 @@
 </head>
 
 <body>
-	<form method="POST" action="postOffer">
-		Title: <input type="text" name="title"> <br>
-		Author: <input type="text" name="author"> <br>
-		ISBN: <input type="text" name="author"> <br>
-		Course: <input type="text" name="author"> <br>
-		<input type="hidden" name="username" value="{{username}}"> 
-		<button id="PostOfferButton" class="btn btn-primary btn-lg" onclick=confirmWindow()>Post Offer</button>
-	</form>
+	<div align="right">
+		Logged in as {{username}} <br>
+		<form method="GET" action="/">
+			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
+		</form>
+		<input type="button" class="btn btn-sm" onclick="history.back();" value="Back">
+	</div>
+	<div align="center">
+		<h4> What book would you like to sell? </h4><br>
+		<form method="POST" action="postOffer">
+			Title: <input type="text" name="title"> <br>
+			Author: <input type="text" name="author"> <br>
+			ISBN: <input type="text" name="isbn"> <br>
+			Course: <input type="text" name="course"> <br>
+			Available for meetup: <textarea name="meetup" cols="50" rows="10"></textarea> </br>
+			<input type="hidden" name="username" value="{{username}}"> 
+			<button id="PostOfferButton" class="btn btn-primary" onclick=confirmWindow()>Post Offer</button>
+		</form>
+	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/introHCI.js"></script>

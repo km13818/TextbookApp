@@ -26,25 +26,31 @@
 		</form>
 		<input type="button" class="btn btn-sm" onclick="history.back();" value="Back">
 	</div>
-	<div align="center">
-		<h4>Search by: </h4>
-		<form method="POST" action="search_offers">
-			Title: <input type="text" name="title"> <br>
-			Author: <input type="text" name="author"> <br>
-			ISBN: <input type="text" name="isbn"> <br>
-			Course: <input type="text" name="course"> <br>
-
-			<input type="hidden" name="username" value="{{username}}"> 
-			<button id="PostOfferButton" class="btn btn-primary" >Search</button>
-
-		</form>
-		<form method="POST" action="display_offers">
-			<input type="hidden" name="username" value="{{username}}"> 
-			<button id="ViewAllOffersButton" class="btn btn-primary" >View all offers</button>
-		</form>
-	<div>
 	<br>
-
+	<h1 align="center">Current offers</h1>
+	<!-- currently wizard of ozing entries. TODO: query db and loop -->
+	<div id="offer1" align="center" class="container">
+   
+          <img src="http://i.imgur.com/YVaTytB.jpg" height="400" width="200" />
+          <p>Sold by user: kjma <br>
+          Title: Algebra <br>
+          Author: Somebody <br>
+          ISBN: 1324-2234-2342-1231 <br>
+          Course: Math 1A<br>
+          </p>
+        
+	</div>
+	<div id="offer2" align="center" class="container">
+   
+          <img src="http://i.imgur.com/CROoyjB.jpg" height="400" width="200" />
+          <p>Sold by user: kjma <br>
+          Title: Physics <br>
+          Author: Somebody2 <br>
+          ISBN: 1324-2234-2342-1231 <br>
+          Course: Math 1A<br>
+          </p>
+        
+	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
