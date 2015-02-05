@@ -19,15 +19,23 @@
 </head>
 
 <body>
+
+	<div align="left">
+		
+				<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
+	</div>	
+
+
 	<div align="right">
 		Logged in as {{username}} <br>
 		<form method="GET" action="/">
 			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
 		</form>
-		<input type="button" class="btn btn-sm" onclick="history.back();" value="Back">
+		
+		
 	</div>
-	<div align="center">
-		<h4>Search by: </h4>
+	<div align="center" style="top: 50%; left: 50%;position: fixed; margin-top: -130px; margin-left: -100px;">
+		<h3>Search by: </h3>
 		<form method="POST" action="search_offers">
 			Title: <input type="text" name="title"> <br>
 			Author: <input type="text" name="author"> <br>
