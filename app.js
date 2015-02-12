@@ -9,11 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-
 var login = require('./routes/login');
-/*var sell = require('./routes/sell');*/
-// Example route
-// var user = require('./routes/user');
 
 var app = express();
 
@@ -31,7 +27,6 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -55,6 +50,17 @@ app.post('/sell', function(req, res){
     res.render( "sell", { 'username':username } );
 });
 
+
+app.get('/create_account', function(req, res){
+    console.log("Log create account");
+    res.render( "createaccount");
+});
+
+app.post('/create_account', function(req, res){
+    console.log("account created");
+    res.render("login");
+});
+
 app.post('/postOffer', function(req, res){
     var username = req.param('username');
     console.log("Logged in as: " + username);
@@ -63,7 +69,7 @@ app.post('/postOffer', function(req, res){
 app.post('/display_offers', function(req, res){
     var username = req.param('username');
     console.log("Logged in as: " + username);
-    res.render( "currentoffers", { 'username':username } );
+    res.render( "currentoffers", offers );
 });
 //TODO: append offers to request
 app.post('/search_offers', function(req, res){
@@ -77,10 +83,12 @@ app.post('/inbox', function(req, res){
     console.log("Logged in as: " + username);
     res.render( "inbox", { 'username':username } );
 });
-app.post('/my_offers', function(req, res){
+app.post('/transactions', function(req, res){
     var username = req.param('username');
+    var dataJson = require('./transactions.json');
+    dataJson.username = username;
     console.log("Logged in as: " + username);
-    res.render( "myoffers", { 'username':username } );
+    res.render( "transactions", dataJson );
 });
 
 // Example route

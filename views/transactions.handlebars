@@ -29,8 +29,52 @@
 		</form>
 	</div>
 	<h4 align="center">Purchases </h4>
-	<h4 align="center">Sales </h4>
+	<table class="data-grid table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th></th>
+				<th> Title </th>
+				<th> Seller </th>
+				<th> ISBN </th>
+				<th> Location </th>
+				<th> Availability </th>
+			</tr>
+			{{#each purchases}}
+				<tr>
+					<td><img src="images/delete-icon.png"></td>
+		        	<td>{{title}} </td> 
+		        	<td>{{seller}}</td> 
+		        	<td>{{isbn}} </td> 
+		        	<td>{{location}} </td> 
+		        	<td>{{availability}} </td> 
+		    	</tr>
+			{{/each}}
+		</thead>
+	</table>
 
+	<h4 align="center">Sales </h4>
+	<table class="data-grid table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th></th>
+				<th> Title </th>
+				<th> Buyer </th>
+				<th> ISBN </th>
+				<th> Location </th>
+				<th> Availability </th>
+			</tr>
+			{{#each sales}}
+				<tr>
+					<td><img src="images/delete-icon.png"></td>
+		        	<td>{{title}} </td> 
+		        	<td>{{buyer}}</td> 
+		        	<td>{{isbn}} </td> 
+		        	<td>{{location}} </td> 
+		        	<td>{{availability}} </td> 
+		    	</tr>
+			{{/each}}
+		</thead>
+	</table>
 </body>
 
 </html>

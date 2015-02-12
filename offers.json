@@ -1,0 +1,25 @@
+{
+	"offers": [
+		{
+			"title": "Algebra",
+			"author": "Somebody",
+			"seller": "Somebody",
+			"isbn": "1324-2234-2342-1231",
+			"course": "Math 10A",
+			"imageurl": "http://i.imgur.com/YVaTytB.jpg",
+			"location": "Price Center",		
+			"availability": "Monday/Wednesday/Friday 9-5pm"
+		},
+		{
+			"title": "Physics",
+			"author": "Somebody",
+			"seller": "Somebody",
+			"isbn": "1324-2234-2342-1231",
+			"course": "Physics 2A",
+			"imageurl": "http://i.imgur.com/CROoyjB.jpg",
+			"location": "Geisel",
+			"availability": "Weekends 12pm and later"
+		}
+	]
+
+}

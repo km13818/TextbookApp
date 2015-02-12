@@ -1,0 +1,29 @@
+{
+	"purchases": [
+		{
+			"title": "Linear Algebra",
+			"seller" : "user21423",
+			"isbn": "1324-2234-2342-1231",
+			"location": "Price Center",		
+			"availability": "Monday/Wednesday/Friday 9-5pm"
+		},
+		{
+			"title": "Modern Physics 8th Edition",
+			"seller": "user32342",
+			"isbn": "1324-1234-2342-1231",
+			"location": "Geisel",
+			"availability": "Weekends 12pm and later"
+		}
+	],
+	"sales": [ 
+		{
+			"title": "Cognitive Science Principles",
+			"buyer" : "user1232",
+			"isbn": "1324-2234-2342-1231",
+			"location": "Price Center",		
+			"availability": "Monday/Wednesday/Friday 9-5pm"			
+		}
+
+	]
+
+}

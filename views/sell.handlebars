@@ -36,8 +36,15 @@
 			Author: <input type="text" name="author"> <br>
 			ISBN: <input type="text" name="isbn"> <br>
 			Course: <input type="text" name="course"> <br>
-			Available for meetup: <textarea name="meetup" cols="50" rows="10"></textarea> </br>
-			<input type="hidden" name="username" value="{{username}}"> 
+			Condition: <input type="text" name="condition"> <br>
+			Meetup Availability: <textarea name="meetup" cols="50" rows="10"></textarea> <br>
+			Location: <select>
+					     <option value="pc">Price Center</option>
+					     <option value="police_station">Police Station</option>
+					     <option value="geisel">Geisel</option>
+					     <option value="anywhere">Off campus/Other</option>
+			          </select> <br>
+			<input type="hidden" name="username" value="{{username}}"> <br>
 			<button id="PostOfferButton" class="btn btn-primary" onclick=confirmWindow()>Post Offer</button>
 		</form>
 	</div>

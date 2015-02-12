@@ -30,7 +30,22 @@
 	</div>
 	<br>
 	<h1 align="center">Current offers</h1>
+
+	{{#each offers}}
+		<div align="center" class="container">
+          <img src="{{imageurl}}" height="400" width="200" />
+          <p>Sold by user: {{seller}} <br>
+          Title: {{title}} <br>
+          Author: {{author}} <br>
+          ISBN: {{isbn}} <br>
+          Course: {{course}}<br>
+          Location: {{location}}<br>
+          Availability: {{availability}}<br>
+          </p>
+        </div>
+	{{/each}}
 	<!-- currently wizard of ozing entries. TODO: query db and loop -->
+	<!--
 	<div id="offer1" align="center" class="container">
    
           <img src="http://i.imgur.com/YVaTytB.jpg" height="400" width="200" />
@@ -52,7 +67,7 @@
           Course: Math 1A<br>
           </p>
         
-	</div>
+	</div>-->
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
