@@ -1,0 +1,18 @@
+{
+	"messages": [
+		{
+			"from" : "buyer123",
+			"to" : "somebody123",
+			"subject": "physics textbook",
+			"date": "2-10-14",
+			"content": "hey can you lower the price a bit on your textbook? it's a bit much. thanks"
+		},
+		{
+			"from" : "kjma",
+			"to" : "somebody123",
+			"subject": "meetup",
+			"date": "2-09-14",
+			"content": "when do you want to meet up to sell your textbook?"
+		}
+	]
+}

@@ -30,14 +30,57 @@
 			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
 		</form>
 	</div>
-		<h4>My Messages</h4>
+		<h1 align="center">My Messages</h1><br>
+		<button id="NewMessageButton" class="btn btn-primary">New Message</button>
+
+		<table class="data-grid table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th style="width:60px"></th>
+					<th style="width:150px"> From </th>
+					<th> Subject </th>
+					<th style="width:150px"> Date </th>
+				</tr>
+				{{#each messages}}
+					<tr>
+						<td><img src="images/delete-icon.png"></td>
+			        	<td>{{from}} </td> 
+			        	<td class="message-subject fake-link">{{subject}}</td>
+			        	<td>{{date}}</td> 
+			    	</tr>
+				{{/each}}
+			</thead>
+		</table>
+		<h3 id="message-subject" align="center"></h3> 
+		<div id="message-content" align="center">
+			
+		</div>
+
 </body>
 
 
 
 </html>
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
 <script>
-	function confirmWindow() {
-		confirm("Confirm post offer?");
+	$(document).ready(function() {
+		$('.message-subject').click(displayMessage);
+	})
+
+	function displayMessage(e) {
+		// Prevent following the link
+		e.preventDefault();
+
+		var clickedMessageSubject = $(this).html();
+		{{#each messages}}
+			if("{{subject}}" == clickedMessageSubject){
+				$('#message-subject').html("Subject: " + "{{subject}}");
+				$('#message-content').html("{{content}}");
+			}
+		{{/each}}
+
 	}
 </script>

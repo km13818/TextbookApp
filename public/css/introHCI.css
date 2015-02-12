@@ -43,3 +43,9 @@
     margin-left:-390px;
     margin-top:-325px;
 }
+
+.fake-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;    
+}

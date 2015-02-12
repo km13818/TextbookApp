@@ -69,6 +69,7 @@ app.post('/postOffer', function(req, res){
 app.post('/display_offers', function(req, res){
     var username = req.param('username');
     console.log("Logged in as: " + username);
+    var offers = require('./offers.json');
     res.render( "currentoffers", offers );
 });
 //TODO: append offers to request
@@ -81,7 +82,9 @@ app.post('/search_offers', function(req, res){
 app.post('/inbox', function(req, res){
     var username = req.param('username');
     console.log("Logged in as: " + username);
-    res.render( "inbox", { 'username':username } );
+    var dataJson = require('./inbox.json');
+    dataJson.username = username;
+    res.render( "inbox", dataJson );
 });
 app.post('/transactions', function(req, res){
     var username = req.param('username');
