@@ -38,15 +38,18 @@
 				<th> ISBN </th>
 				<th> Location </th>
 				<th> Availability </th>
+				<th></th>
 			</tr>
 			{{#each purchases}}
 				<tr>
-					<td><img src="images/delete-icon.png"></td>
+					<td><img class="delete-icon" src="images/delete-icon.png"></td>
 		        	<td>{{title}} </td> 
 		        	<td>{{seller}}</td> 
 		        	<td>{{isbn}} </td> 
 		        	<td>{{location}} </td> 
 		        	<td>{{availability}} </td> 
+		        	<td><button class="new-msg-btn btn btn-primary">
+		        		Message user</button></td>
 		    	</tr>
 			{{/each}}
 		</thead>
@@ -62,6 +65,7 @@
 				<th> ISBN </th>
 				<th> Location </th>
 				<th> Availability </th>
+				<th></th>
 			</tr>
 			{{#each sales}}
 				<tr>
@@ -71,10 +75,64 @@
 		        	<td>{{isbn}} </td> 
 		        	<td>{{location}} </td> 
 		        	<td>{{availability}} </td> 
+		        	<td><button class="new-msg-btn btn btn-primary">
+		        		Message user</button></td>
 		    	</tr>
 			{{/each}}
 		</thead>
 	</table>
+
+	<div id="delete-offer-modal" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title">Delete</h4>
+	            </div>
+	            <div class="modal-body" align="center">
+	                Delete this offer?
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	                <button type="button" class="btn btn-primary">Yes</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+<div id="new-message-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Send a message</h4>
+            </div>
+            <div class="modal-body" align="center">
+                To: <input type="text" name="modal-to"> <br>
+                Subject: <input type="text" name="modal-subject"> <br>
+                <textarea name="modal-msg-text" cols="50" rows="10"></textarea> <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send!</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </html>
+<script>
+	$(document).ready(function() {
+		$('.new-msg-btn').click(function(){
+			$('#new-message-modal').modal('show');
+		});
+	})
+	$(document).ready(function() {
+		$('.delete-icon').click(function(){
+			$('#delete-offer-modal').modal('show');
+		});
+	})
+</script>

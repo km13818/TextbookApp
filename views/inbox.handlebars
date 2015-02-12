@@ -43,7 +43,7 @@
 				</tr>
 				{{#each messages}}
 					<tr>
-						<td><img src="images/delete-icon.png"></td>
+						<td><img class="delete-icon" src="images/delete-icon.png"></td>
 			        	<td>{{from}} </td> 
 			        	<td class="message-subject fake-link">{{subject}}</td>
 			        	<td>{{date}}</td> 
@@ -55,12 +55,45 @@
 		<div id="message-content" align="center">
 			
 		</div>
-
+	<div id="delete-message-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete</h4>
+            </div>
+            <div class="modal-body" align="center">
+                Delete this offer?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="new-message-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Send a message</h4>
+            </div>
+            <div class="modal-body" align="center">
+                To: <input type="text" name="modal-to"> <br>
+                Subject: <input type="text" name="modal-subject"> <br>
+                <textarea name="modal-msg-text" cols="50" rows="10"></textarea> <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send!</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+</html>                                		
 
-
-
-</html>
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
@@ -68,8 +101,15 @@
 <script>
 	$(document).ready(function() {
 		$('.message-subject').click(displayMessage);
+		$('#NewMessageButton').click(function(){
+			$('#new-message-modal').modal('show');
+		});
 	})
-
+	$(document).ready(function() {
+		$('.delete-icon').click(function(){
+			$('#delete-message-modal').modal('show');
+		});
+	})
 	function displayMessage(e) {
 		// Prevent following the link
 		e.preventDefault();
