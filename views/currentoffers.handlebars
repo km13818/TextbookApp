@@ -35,7 +35,9 @@
 		<div align="center" class="container">
           <img src="{{imageurl}}" height="400" width="200" />
           <p>
-          <button class="message-seller-btn btn btn-primary">Message seller</button><br>
+          <button class="message-seller-btn btn btn-primary">Message seller</button>
+          <button class="purchase-btn btn btn-primary">Purchase</button>
+          <br>
           <b>Seller:</b> {{seller}} <br>
           <b>Title:</b> {{title}} <br>
           <b>Author:</b> {{author}} <br>
@@ -66,6 +68,24 @@
         </div>
     </div>
 </div>
+
+<div id="purchase-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body" align="center">
+                Purchase this textbook?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/introHCI.js"></script>
@@ -78,6 +98,9 @@
   $(document).ready(function() {
     $('.message-seller-btn').click(function(){
       $('#new-message-modal').modal('show');
+    });
+    $('.purchase-btn').click(function(){
+      $('#purchase-modal').modal('show');
     });
   })
 </script>
