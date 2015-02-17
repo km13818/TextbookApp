@@ -1,4 +1,5 @@
 
+var models = require('../models');
 /*
  * GET home page.
  */

@@ -2,19 +2,27 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var login = require('./routes/login');
+var dbaccess = require('./routes/dbaccess');
+
+//mongodb
+var local_database_uri  = 'mongodb://localhost/' + "appdb";
+var database_uri = process.env.MONGOLAB_URI || local_database_uri;
+mongoose.connect(database_uri);
 
 var app = express();
 
+
+
 // all environments
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
@@ -34,11 +42,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', login.view);
-app.post('/home', function(req, res){
-    var username = req.param('username');
-    console.log("Logged in as: " + username);
-    res.render( "index", { 'username':username } );
-});
+app.post('/verifyAccount', dbaccess.verifyAccount);
 app.post('/buy', function(req, res){
     var username = req.param('username');
     console.log("Log buy");
@@ -52,14 +56,10 @@ app.post('/sell', function(req, res){
 
 
 app.get('/create_account', function(req, res){
-    console.log("Log create account");
     res.render( "createaccount");
 });
 
-app.post('/create_account', function(req, res){
-    console.log("account created");
-    res.render("login");
-});
+app.post('/create_account', dbaccess.createAccount);
 
 app.post('/postOffer', function(req, res){
     var username = req.param('username');
@@ -98,5 +98,6 @@ app.post('/transactions', function(req, res){
 // app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+    console.log('Express server listening on port ' + app.get('port'));
+
 });
