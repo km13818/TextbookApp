@@ -23,7 +23,7 @@
 		<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
 	</div>	
 	<div align="right">
-		Logged in as {{username}} <br>
+		Logged in as <div id="username">{{username}}</div> <br>
 		<form method="GET" action="/">
 			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
 		</form>
@@ -42,12 +42,12 @@
 			</tr>
 			{{#each purchases}}
 				<tr>
-					<td><img class="delete-icon" src="images/delete-icon.png"></td>
-		        	<td>{{title}} </td> 
-		        	<td>{{seller}}</td> 
-		        	<td>{{isbn}} </td> 
-		        	<td>{{location}} </td> 
-		        	<td>{{availability}} </td> 
+					<td><img src="images/delete-icon.png" class="delete-transaction-icon"></td>
+		        	<td><div class="title">{{title}}</div> </td> 
+		        	<td><div class="seller">{{seller}}</div></td> 
+		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
+		        	<td><div class="location">{{location}}</div> </td> 
+		        	<td><div class="availability">{{availability}}</div></td> 
 		        	<td><button class="new-msg-btn btn btn-primary">
 		        		Message user</button></td>
 		    	</tr>
@@ -69,12 +69,12 @@
 			</tr>
 			{{#each sales}}
 				<tr>
-					<td><img src="images/delete-icon.png"></td>
-		        	<td>{{title}} </td> 
-		        	<td>{{buyer}}</td> 
-		        	<td>{{isbn}} </td> 
-		        	<td>{{location}} </td> 
-		        	<td>{{availability}} </td> 
+					<td><img src="images/delete-icon.png" class="delete-transaction-icon"></td>
+		        	<td><div class="title">{{title}}</div> </td> 
+		        	<td><div class="buyer">{{buyer}}</div></td> 
+		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
+		        	<td><div class="location">{{location}}</div> </td> 
+		        	<td><div class="availability">{{availability}}</div></td> 
 		        	<td><button class="new-msg-btn btn btn-primary">
 		        		Message user</button></td>
 		    	</tr>
@@ -95,17 +95,17 @@
 			</tr>
 			{{#each pendingsales}}
 				<tr>
-					<td><img src="images/delete-icon.png"></td>
-		        	<td>{{title}} </td> 
-		        	<td>{{isbn}} </td> 
-		        	<td>{{location}} </td> 
-		        	<td>{{availability}} </td> 
+					<td><img src="images/delete-icon.png" class="delete-pending-sale-icon"></td>
+		        	<td><div class="title">{{title}}</div> </td> 
+		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
+		        	<td><div class="location">{{location}}</div> </td> 
+		        	<td><div class="availability">{{availability}}</div></td> 
 		    	</tr>
 			{{/each}}
 		</thead>
 	</table>
 
-	<div id="delete-offer-modal" class="modal fade">
+	<div id="delete-transaction-modal" class="modal fade">
 	    <div class="modal-dialog">
 	        <div class="modal-content">
 	            <div class="modal-header">
@@ -113,49 +113,91 @@
 	                <h4 class="modal-title">Delete</h4>
 	            </div>
 	            <div class="modal-body" align="center">
-	                Delete this offer?
+	                Delete this transaction?
 	            </div>
 	            <div class="modal-footer">
 	                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-	                <button type="button" class="btn btn-primary">Yes</button>
+	                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=deleteTransaction()>Yes</button>
 	            </div>
 	        </div>
 	    </div>
 	</div>
-
-<div id="new-message-modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Send a message</h4>
-            </div>
-            <div class="modal-body" align="center">
-                To: <input type="text" name="modal-to"> <br>
-                Subject: <input type="text" name="modal-subject"> <br>
-                <textarea name="modal-msg-text" cols="50" rows="10"></textarea> <br>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send!</button>
-            </div>
-        </div>
-    </div>
-</div>
+	<div id="delete-pending-sale-modal" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title">Delete</h4>
+	            </div>
+	            <div class="modal-body" align="center">
+	                Delete this pending sale?
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=deleteOffer()>Yes</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div id="new-message-modal" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title">Send a message</h4>
+	            </div>
+	            <div class="modal-body" align="center">
+	                To: <input type="text" name="modal-to"> <br>
+	                Subject: <input type="text" name="modal-subject"> <br>
+	                <textarea name="modal-msg-text" cols="50" rows="10"></textarea> <br>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                <button type="button" class="btn btn-primary" data-dismiss="modal">Send!</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </body>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </html>
 <script>
+	var offerToDelete;
+
 	$(document).ready(function() {
 		$('.new-msg-btn').click(function(){
 			$('#new-message-modal').modal('show');
 		});
-	})
-	$(document).ready(function() {
-		$('.delete-icon').click(function(){
-			$('#delete-offer-modal').modal('show');
+		$('.delete-transaction-icon').click(function(){
+			offerToDelete = $(this).parent().parent();
+			$('#delete-transaction-modal').modal('show');
 		});
-	})
+		$('.delete-pending-sale-icon').click(function(){
+			offerToDelete = $(this).parent().parent();
+			$('#delete-pending-sale-modal').modal('show');
+		});
+	});
+
+	function deleteTransaction() {
+		var username = $('#username').text().trim();
+		var buyer = offerToDelete.find('.buyer').text().trim();
+	    var seller = offerToDelete.find('.seller').text().trim();
+	    var title = offerToDelete.find('.title').text().trim();
+	    var isbn = offerToDelete.find('.isbn').text().trim();
+	    var location = offerToDelete.find('.location').text().trim();
+	    var availability = offerToDelete.find('.availability').text().trim();
+		$.post('deleteTransaction', {'username': username, 'buyer' : buyer, 'seller' : seller, 'title' : title, 'isbn': isbn, 'location' : location, 'availability' : availability});
+	}
+
+	function deleteOffer() {
+		var username = $('#username').text().trim();
+	    var seller = $('#username').text().trim();
+	    var title = offerToDelete.find('.title').text().trim();
+	    var isbn = offerToDelete.find('.isbn').text().trim();
+	    var location = offerToDelete.find('.location').text().trim();
+	    var availability = offerToDelete.find('.availability').text().trim();
+	    $.post('deleteOffer', {'username': username, 'seller' : seller, 'title' : title, 'isbn': isbn, 'location' : location, 'availability' : availability});
+	}
 </script>

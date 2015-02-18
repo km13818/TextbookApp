@@ -105,6 +105,57 @@ exports.createAccount = function(req, res) {
   // make a new Project and save it to the DB
   // YOU MUST send an OK response w/ res.send();
 }
+exports.deleteTransaction = function(req,res) {
+  var username = req.param('username');
+  var title = req.param('title');
+  var buyer = req.param('buyer').trim();
+  var seller = req.param('seller').trim();
+  var isbn = req.param('isbn');
+  var location = req.param('location');
+  var availability = req.param('availability');
+  console.log("dbaccess deleteTransaction: " + username + title + buyer + seller + isbn + location + availability);
+
+  if (buyer == '') {
+    models.Transactions
+    .find({"seller" : seller, "title" : title, "isbn" : isbn , "location" : location, "availability": availability})
+    .remove()
+    .exec(afterDelete);
+  }
+  if (seller == '') {
+    models.Transactions
+    .find({"buyer" : buyer, "title" : title, "isbn" : isbn , "location" : location, "availability": availability})
+    .remove()
+    .exec(afterDelete);
+  }
+  function afterDelete(err, retJson) {
+      if(err) console.log(err);
+      res.send();
+      res.render('currentoffers', {'username': username});
+  }
+}
+exports.deleteOffer = function(req,res) {
+  var username = req.param('username');
+  var title = req.param('title');
+  var seller = req.param('seller').trim();
+  var isbn = req.param('isbn');
+  var location = req.param('location');
+  var availability = req.param('availability');
+  console.log("dbaccess deleteOffer: " + username + title + seller + isbn + location + availability);
+
+
+  models.Offers
+    .find({"seller" : seller, "title" : title, "isbn" : isbn , "location" : location, "availability": availability})
+    .remove()
+    .exec(afterDelete);
+
+
+  function afterDelete(err, retJson) {
+      if(err) console.log(err);
+      res.send();
+      res.render('currentoffers', {'username': username});
+  }
+}
+
 exports.makeTransaction = function(req,res){
   var title = req.param('title');
   var buyer = req.param('buyer');
