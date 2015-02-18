@@ -8,6 +8,29 @@ var LoginSchema = new Mongoose.Schema({
   "pass" : String,
 });
 
+var OffersSchema = new Mongoose.Schema({
+	"title": String,
+	"author": String,
+	"seller": String,
+	"isbn": String,
+	"course": String,
+	"condition": String,
+	"imageurl": String,
+	"location": String,		
+	"availability": String
+});
+
+var TransactionSchema = new Mongoose.Schema({
+	"buyer": String,
+	"seller": String,
+	"title": String,
+	"isbn": String,
+	"location": String,
+	"availability": String
+});
+
 exports.Logins = Mongoose.model('Logins', LoginSchema);
+exports.Offers = Mongoose.model('Offers', OffersSchema);
+exports.Transactions = Mongoose.model('Transactions', TransactionSchema);
 console.log("models.js running");
 

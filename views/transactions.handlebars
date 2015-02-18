@@ -82,6 +82,29 @@
 		</thead>
 	</table>
 
+	<h4 align="center">Pending sales</h4>
+	<table class="data-grid table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th></th>
+				<th> Title </th>
+				<th> ISBN </th>
+				<th> Location </th>
+				<th> Availability </th>
+				<th></th>
+			</tr>
+			{{#each pendingsales}}
+				<tr>
+					<td><img src="images/delete-icon.png"></td>
+		        	<td>{{title}} </td> 
+		        	<td>{{isbn}} </td> 
+		        	<td>{{location}} </td> 
+		        	<td>{{availability}} </td> 
+		    	</tr>
+			{{/each}}
+		</thead>
+	</table>
+
 	<div id="delete-offer-modal" class="modal fade">
 	    <div class="modal-dialog">
 	        <div class="modal-content">

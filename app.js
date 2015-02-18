@@ -60,18 +60,16 @@ app.get('/create_account', function(req, res){
 });
 
 app.post('/create_account', dbaccess.createAccount);
+app.post('/insert_offer', dbaccess.insertOffer);
 
 app.post('/postOffer', function(req, res){
     var username = req.param('username');
     console.log("Logged in as: " + username);
     res.render( "index", { 'username':username } );
 });
-app.post('/display_offers', function(req, res){
-    var username = req.param('username');
-    console.log("Logged in as: " + username);
-    var offers = require('./offers.json');
-    res.render( "currentoffers", offers );
-});
+app.post('/display_offers', dbaccess.retrieveOffers);
+app.post('/makeTransaction', dbaccess.makeTransaction);
+app.post('/transactions', dbaccess.retrieveTransactions);
 //TODO: append offers to request
 app.post('/search_offers', function(req, res){
     var username = req.param('username');
@@ -86,13 +84,13 @@ app.post('/inbox', function(req, res){
     dataJson.username = username;
     res.render( "inbox", dataJson );
 });
-app.post('/transactions', function(req, res){
+/*app.post('/transactions', function(req, res){
     var username = req.param('username');
     var dataJson = require('./transactions.json');
     dataJson.username = username;
     console.log("Logged in as: " + username);
     res.render( "transactions", dataJson );
-});
+});*/
 
 // Example route
 // app.get('/users', user.list);

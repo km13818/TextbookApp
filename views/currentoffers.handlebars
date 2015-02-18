@@ -23,7 +23,7 @@
 		<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
 	</div>	
 	<div align="right">
-		Logged in as {{username}} <br>
+		Logged in as <div id="username">{{username}}</div> <br>
 		<form method="GET" action="/">
 			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
 		</form>
@@ -35,16 +35,16 @@
 		<div align="center" class="container">
           <img src="{{imageurl}}" height="400" width="200" />
           <p>
-          <button class="message-seller-btn btn btn-primary">Message seller</button>
-          <button class="purchase-btn btn btn-primary">Purchase</button>
-          <br>
-          <b>Seller:</b> {{seller}} <br>
-          <b>Title:</b> {{title}} <br>
-          <b>Author:</b> {{author}} <br>
-          <b>ISBN:</b> {{isbn}} <br>
-          <b>Course:</b> {{course}}<br>
-          <b>Location:</b> {{location}}<br>
-          <b>Availability:</b> {{availability}}<br>
+            <button class="message-seller-btn btn btn-primary">Message seller</button>
+            <button class="purchase-btn btn btn-primary">Purchase</button>
+            <br>
+            <b>Seller:</b> <div class="seller">{{seller}} </div><br>
+            <b>Title:</b> <div class="title">{{title}}</div> <br>
+            <b>Author:</b> <div class="author">{{author}}</div> <br>
+            <b>ISBN:</b> <div class="isbn">{{isbn}}</div> <br>
+            <b>Course:</b> <div class="course">{{course}}</div><br>
+            <b>Location:</b> <div class="location">{{location}}</div><br>
+            <b>Availability:</b> <div class="availability">{{availability}}</div><br>
           </p>
         </div>
 	{{/each}}
@@ -81,7 +81,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Yes</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=makeTransaction()>Yes</button>
+       
             </div>
         </div>
     </div>
@@ -95,12 +96,28 @@
 
 </html>
 <script>
+  var purchaseDiv;
   $(document).ready(function() {
     $('.message-seller-btn').click(function(){
       $('#new-message-modal').modal('show');
     });
     $('.purchase-btn').click(function(){
+       purchaseDiv = $(this).parent().parent();
       $('#purchase-modal').modal('show');
     });
   })
+
+  function makeTransaction() {
+     // console.log("test..." + purchaseDiv.find('.seller').text());
+      //console.log("transaction: " + purchaseDiv.html());
+      var buyer = $('#username').text();
+      var seller = purchaseDiv.find('.seller').text().trim();
+      var title = purchaseDiv.find('.title').text().trim();
+      var isbn = purchaseDiv.find('.isbn').text().trim();
+      var location = purchaseDiv.find('.location').text().trim();
+      var availability = purchaseDiv.find('.availability').text().trim();
+      console.log(buyer + seller + title + isbn);
+      $.post( "makeTransaction", { "buyer": buyer , "seller" : seller  ,"title" : title, "isbn" : isbn, "location" : location, "availability" : availability  } );
+      $.post("buy", {"username" : buyer});
+  }
 </script>
