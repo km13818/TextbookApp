@@ -10,13 +10,15 @@
 }
 
 .jumbotron {
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    color: #ffffff;
 	position: relative;
 	background: none;
 }
 
 .jumbotron:after {
      content:"";
-     background: url("../images/brbs-e.jpg");
+     background: url("");
      opacity: 0.2;
      top: 0;
      left: 0;
@@ -50,13 +52,20 @@
     cursor: pointer;    
 }
 
-/*body {
+body {
     background-image: url("../images/Geisel.jpg");
     background-color: #ffffff;
     background-repeat: no-repeat;
-}*/
+    background-size: 100% 100%;
+    background-position: center; 
+}
 
 h1{
- color: #000000;
+ font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+
+}
+
+div form{
+background-color: transparent;
 
 }

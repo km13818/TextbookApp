@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html>
+
 <head>
 	<title>Textbook App</title>	
 	<meta charset="utf-8">
@@ -19,13 +20,53 @@
 </head>
 
 <body>
-	<div align="right">
+
+
+	<div class="container">
+
+	<nav class="navbar navbar-default">
+
+		<p class="navbar-text navbar-right">Logged in as {{username}}</p>
+
+  		<div class="container-fluid">
+   		 <div class="navbar-header">
+
+       <div class="dropdown">
+ 		 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+   		 <span class="glyphicon glyphicon-align-justify"></span>
+  		</button>
+
+  	 	 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+   		 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Buy</a></li>
+   		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sell</a></li>
+   		 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Messages</a></li>
+    	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Offers/Transactions</a></li>
+    	<li class="divider"></li>
+		<form method="GET" action="/">
+		<button id="Logout" class="btn btn-link">Logout</button><br>
+		</form>
+ 		</ul>
+
+ 		</div>
+
+
+
+
+<!--
+ 		<div align="right">
 		Logged in as {{username}} <br>
 		<form method="GET" action="/">
 			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
 		</form>
-	</div>
-	<div class="container">
+		</div>
+
+-->
+
+    </div>
+  </div>
+</nav>
+
+
 		<div align="center">
 
 			<div class="jumbotron">
