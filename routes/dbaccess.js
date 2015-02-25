@@ -237,39 +237,7 @@ exports.makeTransaction = function(req,res){
   }
   function afterDelete(err, retJson) {
       if(err) console.log(err);
-      
-   /*   var http = require('http');
-      var querystring = require('querystring');
-      var post_data = querystring.stringify({'username': buyer});
-     // An object of options to indicate where to post to
-      var post_options = {
-          path: '/display_offers',
-          port: '3000',
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-              'Content-Length': post_data.length
-          }
-      };
-
-      // Set up the request
-      var post_req = http.request(post_options, function(res) {
-          res.setEncoding('utf8');
-          res.on('data', function (chunk) {
-              console.log('Response: ' + chunk);
-          });
-      });
-      console.log("p1");
-      // post the data
-      post_req.write(post_data);
-      console.log("p2");
-    //  post_req.end();
-      console.log("p3"); */
-          res.send();
-       //   res.end();
-    //res.render('buy', {'username': buyer});
-
-
+      res.send();
   }
 }//end makeTransaction
 exports.insertOffer = function(req, res) {
@@ -284,7 +252,41 @@ exports.insertOffer = function(req, res) {
   var condition = req.param('condition');
   var imageurl = req.param('imageurl');
   var location = req.param('location');
-  var availability = req.param('availability');
+  var availability = "";  
+
+  var sunday = req.param('sunday-checkbox');
+  var monday = req.param('monday-checkbox');
+  var tuesday = req.param('tuesday-checkbox');
+  var wednesday = req.param('wednesday-checkbox');
+  var thursday = req.param('thursday-checkbox');
+  var friday = req.param('friday-checkbox');
+  var saturday = req.param('saturday-checkbox');
+
+  if(!(typeof (sunday) === "undefined")) {
+    availability += sunday + ": " + req.param("sunday-av") + "\r\n";
+  }
+  if(!(typeof (monday) === "undefined")) {
+    availability += monday + ": " + req.param("monday-av") + "\r\n";
+  }
+  if(!(typeof (tuesday) === "undefined")) {
+    availability += tuesday + ": " + req.param("tuesday-av") + "\r\n";
+  }
+  if(!(typeof (wednesday) === "undefined")) {
+    availability += wednesday + ": " + req.param("wednesday-av") + "\r\n";
+  }
+  if(!(typeof (thursday) === "undefined")) {
+    availability += thursday + ": " + req.param("thursday-av") + "\r\n";
+  }
+  if(!(typeof (friday) === "undefined")) {
+    availability += friday + ": " + req.param("friday-av") + "\r\n";
+  }
+  if(!(typeof (saturday) === "undefined")) {
+    availability += saturday + ": " + req.param("saturday-av") + "\r\n";
+  }
+
+  console.log("availability: "  + availability);
+
+  console.log("LOGGING DAYS: " + sunday + monday + tuesday + wednesday + thursday + friday + saturday);
  // console.log(username + pass);
   var newOffer = new models.Offers({ 
     "title": title,
