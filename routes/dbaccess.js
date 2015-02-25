@@ -70,6 +70,34 @@ exports.searchOffers = function(req, res) {
   var isbn= req.param('isbn');
   var course= req.param('course');
   // query for the specific project and
+
+  if(title != '' && author == '' && isbn == '' && course == '') {
+     models.Offers
+    .find({'title' : title})
+    .exec(afterQuery); 
+  }
+  else if(title =='' && author != '' && isbn == '' && course == ''){
+     models.Offers
+    .find({'author' : author})
+    .exec(afterQuery); 
+  }
+  else if(title =='' && author == '' && isbn != '' && course == ''){
+     models.Offers
+    .find({'isbn' : isbn})
+    .exec(afterQuery); 
+  }
+  else if(title == '' && author == '' && isbn == '' && course != '') {
+     models.Offers
+    .find({'course' : course})
+    .exec(afterQuery); 
+  
+  }
+  else {
+     models.Offers
+    .find({'course' : course, 'title': title, 'author': author, 'isbn': isbn})
+    .exec(afterQuery);     
+  }
+
   models.Offers
     .find({'title' : title, 'author': author, 'isbn' : isbn})
     .exec(afterQuery);
