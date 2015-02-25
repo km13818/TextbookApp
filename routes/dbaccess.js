@@ -160,13 +160,12 @@ exports.deleteOffer = function(req,res) {
   var title = req.param('title');
   var seller = req.param('seller').trim();
   var isbn = req.param('isbn');
-  var location = req.param('location');
-  var availability = req.param('availability');
+
   console.log("dbaccess deleteOffer: " + username + title + seller + isbn + location + availability);
 
 
   models.Offers
-    .find({"seller" : seller, "title" : title, "isbn" : isbn , "location" : location, "availability": availability})
+    .find({"seller" : seller, "title" : title, "isbn" : isbn})
     .remove()
     .exec(afterDelete);
 
