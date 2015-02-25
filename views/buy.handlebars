@@ -20,15 +20,66 @@
 
 <body>
 
+	<div class=container>
+
+	<!--- NAVBAR -->
+	<nav class="navbar navbar-default">
+
+			<form method="POST" action="index">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button type="IndexButton" class="btn btn-default pull-right">
+  				<span class="glyphicon glyphicon-home"></span>
+				</button>
+			</form>
+
+			<p class="navbar-text pull-right">Logged in as {{username}}</p>
+
+  		<div class="container-fluid">
+   		 <div class="navbar-header">
+
+       <div class="dropdown">
+ 		 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+   		 <span class="glyphicon glyphicon-align-justify"></span>
+  		</button>
+
+  	 	 <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+   		    		
+   		 <form method="POST" action="buy">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="BuyButton" class="btn btn-link">Buy</button>
+		</form> 
+   		
+   		<form method="POST" action="sell">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="SellButton" class="btn btn-link">Sell</button>
+		</form> 
+
+   		<form method="POST" action="inbox">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="InboxButton" class="btn btn-link">Messages</button>
+		</form>
+
+    	<form method="POST" action="transactions">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="InboxButton" class="btn btn-link">My Offers/Transactions</button>
+		</form>
+
+    	<li class="divider"></li>
+		<form method="GET" action="/">
+		<button id="Logout" class="btn btn-link">Logout</button><br>
+		</form>
+ 		</ul>
+
+ 				</div>
+    		</div>
+  		</div>
+	</nav>
+	<!--- NAVBAR END -->
+
 	<div align="left">
 		<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
 	</div>	
-	<div align="right">
-		Logged in as {{username}} <br>
-		<form method="GET" action="/">
-			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
-		</form>
-	</div>
+
 	<div align="center">
 		<h1> What book would you like to buy? </h1><br>
 		<h5>Search by: </h5>

@@ -53,6 +53,11 @@ app.post('/sell', function(req, res){
     console.log("Log sell");
     res.render( "sell", { 'username':username } );
 });
+app.post('/index', function(req, res){
+    var username = req.param('username');
+    console.log("Log index");
+    res.render( "index", { 'username':username } );
+});
 
 
 app.get('/create_account', function(req, res){
