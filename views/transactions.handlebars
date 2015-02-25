@@ -28,6 +28,7 @@
 			<button id="Logout" class="btn btn-default btn-sm">Logout</button><br>
 		</form>
 	</div>
+	<input id="refresh-btn" type="submit" style="display: none;">
 	<h4 align="center">Purchases </h4>
 	<table class="data-grid table table-striped table-bordered">
 		<thead>
@@ -178,6 +179,10 @@
 			offerToDelete = $(this).parent().parent();
 			$('#delete-pending-sale-modal').modal('show');
 		});
+		$('#refresh-btn').click(function(){
+			var username = $('#username').text()
+			location.reload();
+	    });
 	});
 
 	function deleteTransaction() {
@@ -189,6 +194,7 @@
 	    var location = offerToDelete.find('.location').text().trim();
 	    var availability = offerToDelete.find('.availability').text().trim();
 		$.post('deleteTransaction', {'username': username, 'buyer' : buyer, 'seller' : seller, 'title' : title, 'isbn': isbn, 'location' : location, 'availability' : availability});
+		$('#refresh-btn').click();
 	}
 
 	function deleteOffer() {
@@ -199,5 +205,6 @@
 	    var location = offerToDelete.find('.location').text().trim();
 	    var availability = offerToDelete.find('.availability').text().trim();
 	    $.post('deleteOffer', {'username': username, 'seller' : seller, 'title' : title, 'isbn': isbn, 'location' : location, 'availability' : availability});
+	    $('#refresh-btn').click();
 	}
 </script>

@@ -17,6 +17,9 @@ exports.retrieveOffers = function(req, res) {
     var username = req.param('username');
     console.log("Logged in as: " + username); 
     res.render( "currentoffers", {'offers' : offers, 'username' : username} );
+
+
+
   }
 }
 
@@ -59,7 +62,26 @@ exports.retrieveTransactions = function(req, res) {
   }
 
 }
+exports.searchOffers = function(req, res) {
+  var username = req.param('username');
 
+  var title= req.param('title');
+  var author= req.param('author');
+  var isbn= req.param('isbn');
+  var course= req.param('course');
+  // query for the specific project and
+  models.Offers
+    .find({'title' : title, 'author': author, 'isbn' : isbn})
+    .exec(afterQuery);
+
+  // call the following callback
+
+  function afterQuery(err, retrievedOffers) {
+    if(err) console.log(err);
+    res.render("currentoffers", { 'offers': retrievedOffers, 'username': username});
+  }
+
+}
 exports.verifyAccount = function(req, res) {
   var username = req.param('username');
   var pass = req.param('pass');
@@ -130,7 +152,7 @@ exports.deleteTransaction = function(req,res) {
   function afterDelete(err, retJson) {
       if(err) console.log(err);
       res.send();
-      res.render('currentoffers', {'username': username});
+   //   res.render('currentoffers', {'username': username});
   }
 }
 exports.deleteOffer = function(req,res) {
@@ -152,7 +174,7 @@ exports.deleteOffer = function(req,res) {
   function afterDelete(err, retJson) {
       if(err) console.log(err);
       res.send();
-      res.render('currentoffers', {'username': username});
+    //  res.render('currentoffers', {'username': username});
   }
 }
 
@@ -188,10 +210,39 @@ exports.makeTransaction = function(req,res){
   }
   function afterDelete(err, retJson) {
       if(err) console.log(err);
-      res.render('buy', {'username': buyer});
-    //  res.send();
-      //console.log("TESTINGIFTHISLOGS");
-     // 
+      
+   /*   var http = require('http');
+      var querystring = require('querystring');
+      var post_data = querystring.stringify({'username': buyer});
+     // An object of options to indicate where to post to
+      var post_options = {
+          path: '/display_offers',
+          port: '3000',
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'Content-Length': post_data.length
+          }
+      };
+
+      // Set up the request
+      var post_req = http.request(post_options, function(res) {
+          res.setEncoding('utf8');
+          res.on('data', function (chunk) {
+              console.log('Response: ' + chunk);
+          });
+      });
+      console.log("p1");
+      // post the data
+      post_req.write(post_data);
+      console.log("p2");
+    //  post_req.end();
+      console.log("p3"); */
+          res.send();
+       //   res.end();
+    //res.render('buy', {'username': buyer});
+
+
   }
 }//end makeTransaction
 exports.insertOffer = function(req, res) {

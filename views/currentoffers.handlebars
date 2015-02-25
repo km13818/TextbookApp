@@ -48,7 +48,7 @@
           </p>
         </div>
 	{{/each}}
-
+<input id="refresh-btn" type="submit" style="display: none;">
 <div id="new-message-modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -105,6 +105,12 @@
        purchaseDiv = $(this).parent().parent();
       $('#purchase-modal').modal('show');
     });
+    $('#refresh-btn').click(function(){
+
+      var username = $('#username').text()
+      //$.post("buy", {"username" : username});
+      location.reload();
+    });
   })
 
   function makeTransaction() {
@@ -118,6 +124,7 @@
       var availability = purchaseDiv.find('.availability').text().trim();
       console.log(buyer + seller + title + isbn);
       $.post( "makeTransaction", { "buyer": buyer , "seller" : seller  ,"title" : title, "isbn" : isbn, "location" : location, "availability" : availability  } );
-      $.post("buy", {"username" : buyer});
+      $('#refresh-btn').click();
+    //  $.post("buy", {"username" : buyer});
   }
 </script>

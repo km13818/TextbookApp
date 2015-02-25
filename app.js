@@ -73,11 +73,7 @@ app.post('/transactions', dbaccess.retrieveTransactions);
 app.post('/deleteTransaction', dbaccess.deleteTransaction);
 app.post('/deleteOffer', dbaccess.deleteOffer);
 //TODO: append offers to request
-app.post('/search_offers', function(req, res){
-    var username = req.param('username');
-    console.log("Logged in as: " + username);
-    res.render( "currentoffers", { 'username':username } );
-});
+app.post('/search_offers', dbaccess.searchOffers);
 
 app.post('/inbox', function(req, res){
     var username = req.param('username');
