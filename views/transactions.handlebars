@@ -19,14 +19,14 @@
 </head>
 
 <body>
-
+<div id="username" style="display:none;">{{username}}</div>
 <div class=container>
 
 	<!--- NAVBAR -->
 	<nav class="navbar navbar-default">
 
 			<form method="POST" action="index">
-				<input type="hidden" name="username" value="{{username}}"> 
+				<input type="hidden" name="username" value="{{username}}">
 				<button type="IndexButton" class="btn btn-default pull-right">
   				<span class="glyphicon glyphicon-home"></span>
 				</button>
@@ -95,6 +95,7 @@
 				<tr>
 					<td><img src="images/delete-icon.png" class="delete-transaction-icon"></td>
 		        	<td><div class="title">{{title}}</div> </td> 
+		        <!--	<div class="buyer" style="display:none;"> {{buyer}} </div>-->
 		        	<td><div class="seller">{{seller}}</div></td> 
 		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
 		        	<td><button class="new-msg-btn btn btn-primary">
@@ -118,6 +119,7 @@
 				<tr>
 					<td><img src="images/delete-icon.png" class="delete-transaction-icon"></td>
 		        	<td><div class="title">{{title}}</div> </td> 
+		        <!--	<div class="seller" style="display:none;"> {{seller}} </div>-->
 		        	<td><div class="buyer">{{buyer}}</div></td> 
 		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
 		        	<td><button class="new-msg-btn btn btn-primary">
@@ -239,6 +241,7 @@
 	    var isbn = offerToDelete.find('.isbn').text().trim();
 	    var location = offerToDelete.find('.location').text().trim();
 	    var availability = offerToDelete.find('.availability').text().trim();
+	   	console.log("posting to deleteTransaction...: " + username + buyer+seller+title+isbn+location+availability);
 		$.post('deleteTransaction', {'username': username, 'buyer' : buyer, 'seller' : seller, 'title' : title, 'isbn': isbn, 'location' : location, 'availability' : availability});
 		$('#refresh-btn').click();
 	}
@@ -248,7 +251,7 @@
 	    var seller = $('#username').text().trim();
 	    var title = offerToDelete.find('.title').text().trim();
 	    var isbn = offerToDelete.find('.isbn').text().trim();
-
+	   	console.log("posting to deleteOffer...: " + username + seller+title+isbn);
 	    $.post('deleteOffer', {'username': username, 'seller' : seller, 'title' : title, 'isbn': isbn});
 	    $('#refresh-btn').click();
 	}

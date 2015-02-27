@@ -161,19 +161,18 @@ exports.deleteTransaction = function(req,res) {
   var buyer = req.param('buyer').trim();
   var seller = req.param('seller').trim();
   var isbn = req.param('isbn');
-  var location = req.param('location');
-  var availability = req.param('availability');
-  console.log("dbaccess deleteTransaction: " + username + title + buyer + seller + isbn + location + availability);
+
+  console.log("dbaccess deleteTransaction: " + username + title + buyer + seller + isbn );
 
   if (buyer == '') {
     models.Transactions
-    .find({"seller" : seller, "title" : title, "isbn" : isbn , "location" : location, "availability": availability})
+    .find({"seller" : seller, "title" : title, "isbn" : isbn })
     .remove()
     .exec(afterDelete);
   }
   if (seller == '') {
     models.Transactions
-    .find({"buyer" : buyer, "title" : title, "isbn" : isbn , "location" : location, "availability": availability})
+    .find({"buyer" : buyer, "title" : title, "isbn" : isbn })
     .remove()
     .exec(afterDelete);
   }
@@ -189,7 +188,7 @@ exports.deleteOffer = function(req,res) {
   var seller = req.param('seller').trim();
   var isbn = req.param('isbn');
 
-  console.log("dbaccess deleteOffer: " + username + title + seller + isbn + location + availability);
+  console.log("dbaccess deleteOffer: username:" + username + "|title:" + title +"|"+ seller + isbn );
 
 
   models.Offers
