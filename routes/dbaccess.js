@@ -188,8 +188,8 @@ exports.deleteOffer = function(req,res) {
   var seller = req.param('seller').trim();
   var isbn = req.param('isbn');
 
-  console.log("dbaccess deleteOffer: username:" + username + "|title:" + title +"|"+ seller + isbn );
 
+  console.log("dbaccess deleteOffer: " + username + title + seller + isbn );
 
   models.Offers
     .find({"seller" : seller, "title" : title, "isbn" : isbn})
