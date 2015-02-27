@@ -32,7 +32,9 @@
 				<input type="hidden" name="username" value="{{username}}"> 
 				<button type="IndexButton" class="btn btn-default pull-right">
   				<span class="glyphicon glyphicon-home"></span>
-				</button>
+
+  			</button>
+			
 			</form>
 
 			<p class="navbar-text pull-right">Logged in as {{username}}</p>
@@ -40,12 +42,12 @@
   		<div class="container-fluid">
    		 <div class="navbar-header">
 
-       <div class="dropdown">
+       <div class="dropdown pull-left">
  		 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
    		 <span class="glyphicon glyphicon-align-justify"></span>
   		</button>
 
-  	 	 <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+  	 	 <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
    		    		
    		 <form method="POST" action="buy">
 				<input type="hidden" name="username" value="{{username}}"> 
