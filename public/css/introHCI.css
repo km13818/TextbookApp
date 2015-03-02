@@ -1,4 +1,8 @@
 /* applies to anything of class "example-class-selector" */
+body{
+    background-color: #6CCECB;
+}
+
 .example-class-selector {
 	margin-top: 2em;
 }
@@ -11,12 +15,14 @@
 
 .jumbotron {
 	position: relative;
-	background: none;
+	background: url("../images/brbs-e.jpg");
+
+
 }
 
 .jumbotron:after {
      content:"";
-     background: url("../images/brbs-e.jpg");
+     /*background: url("../images/brbs-e.jpg");*/
      opacity: 0.2;
      top: 0;
      left: 0;
@@ -56,7 +62,68 @@
     background-repeat: no-repeat;
 }*/
 
-h1{
- color: #000000;
+.jumbotron h1{
+ color: #FFC04D;
+}
+
+#BuyButton{
+    width:500px;
+    background: #F9E559; /*the colour of the button*/
+    padding: 8px 14px 10px; /*apply some padding inside the button*/
+    border:1px solid #F9E559; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1.5em;
+    font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: #000000;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    /*give the corners a small curve*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#BuyButton:hover, #BuyButton:focus{
+    color:#E6B800;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+
+}
+
+#SellButton{
+    width:500px;
+    background: #F9E559; /*the colour of the button*/
+    padding: 8px 14px 10px; /*apply some padding inside the button*/
+    border:1px solid #F9E559; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1.5em;
+    font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: #000000;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    /*give the corners a small curve*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#SellButton:hover, #SellButton:focus{
+    color:#E6B800;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
 
 }
