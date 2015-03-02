@@ -67,7 +67,6 @@ body{
 }
 
 #BuyButton{
-    width:500px;
     background: #F9E559; /*the colour of the button*/
     padding: 8px 14px 10px; /*apply some padding inside the button*/
     border:1px solid #F9E559; /*required or the default border for the browser will appear*/
@@ -98,7 +97,6 @@ box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999
 }
 
 #SellButton{
-    width:500px;
     background: #F9E559; /*the colour of the button*/
     padding: 8px 14px 10px; /*apply some padding inside the button*/
     border:1px solid #F9E559; /*required or the default border for the browser will appear*/
