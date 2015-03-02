@@ -88,7 +88,7 @@ body{
 }
 
 #BuyButton:hover, #BuyButton:focus{
-    color:#E6B800;
+    color:#006363;
 /*reduce the size of the shadow to give a pushed effect*/
 -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
 -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
@@ -118,7 +118,7 @@ box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999
 }
 
 #SellButton:hover, #SellButton:focus{
-    color:#E6B800;
+    color:#006363;
 /*reduce the size of the shadow to give a pushed effect*/
 -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
 -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
