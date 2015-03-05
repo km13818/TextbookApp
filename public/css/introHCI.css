@@ -1,6 +1,6 @@
 /* applies to anything of class "example-class-selector" */
 body{
-    background-color: #6CCECB;
+    background-color: #3C5A63;
 }
 
 .example-class-selector {
@@ -67,8 +67,8 @@ body{
 }
 
 #BuyButton{
-    background: #F9E559; /*the colour of the button*/
-    padding: 8px 14px 10px; /*apply some padding inside the button*/
+    background: #299788; /*the colour of the button*/
+    padding: 18px 14px 10px; /*apply some padding inside the button*/
     border:1px solid #F9E559; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
@@ -90,14 +90,14 @@ body{
 #BuyButton:hover, #BuyButton:focus{
     color:#006363;
 /*reduce the size of the shadow to give a pushed effect*/
--webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
--moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
 
 }
 
 #SellButton{
-    background: #F9E559; /*the colour of the button*/
+    background: #299788; /*the colour of the button*/
     padding: 8px 14px 10px; /*apply some padding inside the button*/
     border:1px solid #F9E559; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/

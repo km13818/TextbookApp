@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/introHCI.css" rel="stylesheet">
+	<link href="css/buy.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->
 	{{>tracking_code_script}}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -84,13 +84,18 @@
 		<h1> What book would you like to buy? </h1><br>
 		<h5>Search by: </h5>
 		<form method="POST" action="search_offers">
-			Title: <input type="text" name="title"> <br>
-			Author: <input type="text" name="author"> <br>
-			ISBN: <input type="text" name="isbn"> <br>
-			Course: <input type="text" name="course"> <br>
+				
+			Title: <input type="text" name="title"> <button class="btn btn-primary search-btn" >Go!</button><br>
+				
+			Author: <input type="text" name="author"> <button class="btn btn-primary search-btn" >Go!</button><br>
+				
+			ISBN: <input type="text" name="isbn"> <button class="btn btn-primary search-btn" >Go!</button><br>
+				
+			Course: <input type="text" name="course"> <button class="btn btn-primary search-btn" >Go!</button><br>
+
 
 			<input type="hidden" name="username" value="{{username}}"> 
-			<button id="PostOfferButton" class="btn btn-primary" >Search</button>
+			
 
 		</form>
 		<form method="POST" action="display_offers">
