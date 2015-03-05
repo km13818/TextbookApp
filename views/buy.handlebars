@@ -32,7 +32,7 @@
 				</button>
 			</form>
 
-			<p class="navbar-text pull-right">Logged in as {{username}}</p>
+			<p class="navbar-text pull-right">Hello, {{username}}</p>
 
   		<div class="container-fluid">
    		 <div class="navbar-header">
@@ -85,13 +85,13 @@
 		<h5>Search by: </h5>
 		<form method="POST" action="search_offers">
 				
-			Title: <input type="text" name="title"> <button class="btn btn-primary search-btn" >Go!</button><br>
+			<div style="float:left">Title: </div> <div style="float:right"><input type="text" name="title">  <button class="btn btn-primary search-btn" >Go!</button></div><br><br>
 				
-			Author: <input type="text" name="author"> <button class="btn btn-primary search-btn" >Go!</button><br>
+			<div style="float:left">Author: </div><div style="float:right"><input type="text" name="author"> <button class="btn btn-primary search-btn" >Go!</button></div><br><br>
 				
-			ISBN: <input type="text" name="isbn"> <button class="btn btn-primary search-btn" >Go!</button><br>
+			<div style="float:left">ISBN: </div><div style="float:right"><input type="text" name="isbn"> <button class="btn btn-primary search-btn" >Go!</button></div><br><br>
 				
-			Course: <input type="text" name="course"> <button class="btn btn-primary search-btn" >Go!</button><br>
+			<div style="float:left">Course: </div><div style="float:right"><input type="text" name="course"> <button class="btn btn-primary search-btn" >Go!</button></div><br><br>
 
 
 			<input type="hidden" name="username" value="{{username}}"> 

@@ -1,6 +1,6 @@
 /* applies to anything of class "example-class-selector" */
 body{
-    background-color: #3C5A63;
+    background-color: #E2E4E5;
 }
 
 .example-class-selector {
@@ -15,19 +15,19 @@ body{
 
 .jumbotron {
 	position: relative;
-	background: url("../images/brbs-e.jpg");
+	/*background: url("../images/Textchange3.jpg");*/
 
 
 }
 
 .jumbotron:after {
      content:"";
-     /*background: url("../images/brbs-e.jpg");*/
-     opacity: 0.2;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
+     /*background: url("../images/Textchange3.jpg");*/
+     opacity: 0;
+     top: 100;
+     left: 100;
+     bottom: 100;
+     right: 100;
      position: absolute;
      z-index: -1;	
 }
@@ -41,9 +41,9 @@ body{
 }
 
 #content {
-     position:absolute;
-    width:780px;
-    height:650px;
+    position:relative;
+    width:180px;
+    height:550px;
     left:50%;
     top:50%;
     margin-left:-390px;
@@ -62,13 +62,13 @@ body{
     background-repeat: no-repeat;
 }*/
 
-.jumbotron h1{
+/*.jumbotron h1{
  color: #FFC04D;
-}
+}*/
 
 #BuyButton{
-    background: #299788; /*the colour of the button*/
-    padding: 18px 14px 10px; /*apply some padding inside the button*/
+    background: #4B91DF /*the colour of the button*/
+    padding: 8px 14px 10px; /*apply some padding inside the button*/
     border:1px solid #F9E559; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
@@ -76,7 +76,7 @@ body{
     font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
     letter-spacing:.1em;
     text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-    color: #000000;
+    color: white;
     /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
     -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
     -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
@@ -88,7 +88,7 @@ body{
 }
 
 #BuyButton:hover, #BuyButton:focus{
-    color:#006363;
+    color:#F6F645;
 /*reduce the size of the shadow to give a pushed effect*/
 -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
 -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
@@ -97,7 +97,7 @@ box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999
 }
 
 #SellButton{
-    background: #299788; /*the colour of the button*/
+   background: #4B91DF /*the colour of the button*/
     padding: 8px 14px 10px; /*apply some padding inside the button*/
     border:1px solid #F9E559; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
@@ -106,7 +106,7 @@ box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999
     font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
     letter-spacing:.1em;
     text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-    color: #000000;
+    color: white;
     /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
     -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
     -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
@@ -118,7 +118,7 @@ box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999
 }
 
 #SellButton:hover, #SellButton:focus{
-    color:#006363;
+    color:#F6F645;
 /*reduce the size of the shadow to give a pushed effect*/
 -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
 -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
