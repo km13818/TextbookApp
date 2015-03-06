@@ -1,75 +1,21 @@
-/* applies to anything of class "example-class-selector" */
 body{
-    background-color: #E2E4E5;
+	background-color: #E2E4E5;
 }
 
-.example-class-selector {
-	margin-top: 2em;
+h1{
+
+	color: #434D53;
+	font-family: Tahoma, sans-serif;
 }
 
-/* applies to any <p> descendants of an element of class "example-class-selector" */
-.example-class-selector p {
-	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
-	color: #CC00AA;
+h4{
+	color: #434D53;
+	font-family: Tahoma, sans-serif;
 }
 
-.jumbotron {
-	position: relative;
-	background: url("../images/Textchange2.jpg") no-repeat center center;
-    background-size: 100% 100%;
-
-
-}
-
-.jumbotron:after {
-     content:"";
-     background: url("../images/Textchange2.jpg");
-     opacity: 0;
-     top: 100;
-     left: 100;
-     bottom: 100;
-     right: 100;
-     position: absolute;
-     z-index: -1;	
-}
-
-.jumbotron p {
-     color: #6e6e6e;
-}
-
-.project a {
-     text-align: center;
-}
-
-#content {
-    position:relative;
-    width:180px;
-    height:550px;
-    left:50%;
-    top:50%;
-    margin-left:-390px;
-    margin-top:-325px;
-}
-
-.fake-link {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;    
-}
-
-/*body {
-    background-image: url("../images/Geisel.jpg");
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-}*/
-
-/*.jumbotron h1{
- color: #FFC04D;
-}*/
-
-#BuyButton{
-    background: #F32515; 
-    padding: 8px 14px 10px; /*apply some padding inside the button*/
+.GoButton{
+	background: #F32515; 
+    padding: 1px 1px 1px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
@@ -88,18 +34,18 @@ body{
     border-radius: 10px;
 }
 
-#BuyButton:hover, #BuyButton:focus{
-    color:#434D53;
+.GoButton:hover, .GoButton:focus{
+	color:#434D53;
 /*reduce the size of the shadow to give a pushed effect*/
--webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
--moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999;
+-webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #000000, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
 
 }
 
-#SellButton{
-   background: #F32515; 
-    padding: 8px 14px 10px; /*apply some padding inside the button*/
+#ViewAllOffersButton{
+	background: #F32515; 
+    padding: 1px 1px 1px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
@@ -118,8 +64,8 @@ box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #299788, 0px 2px 5px #999
     border-radius: 10px;
 }
 
-#SellButton:hover, #SellButton:focus{
-    color:#434D53;
+#ViewAllOffersButton:hover, #ViewAllOffersButton:focus{
+	color:#434D53;
 /*reduce the size of the shadow to give a pushed effect*/
 -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
 -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;

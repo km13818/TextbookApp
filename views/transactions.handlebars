@@ -8,6 +8,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
+		{{>tracking_code_script}}
 	<!-- this is a comment in HTML -->
 	{{> tracking_code_script}}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,7 +33,7 @@
 				</button>
 			</form>
 
-			<p class="navbar-text pull-right">Logged in as {{username}}</p>
+			<p class="navbar-text pull-right">Hello, {{username}}</p>
 
   		<div class="container-fluid">
    		 <div class="navbar-header">
@@ -46,12 +47,12 @@
    		    		
    		 <form method="POST" action="buy">
 				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="BuyButton" class="btn btn-link">Buy</button>
+				<button id="BuyBtn" class="btn btn-link">Buy</button>
 		</form> 
    		
    		<form method="POST" action="sell">
 				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="SellButton" class="btn btn-link">Sell</button>
+				<button id="SellBtn" class="btn btn-link">Sell</button>
 		</form> 
 
    		<form method="POST" action="inbox">

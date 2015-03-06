@@ -9,6 +9,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
+		{{>tracking_code_script}}
 	<!-- this is a comment in HTML -->
 	{{> tracking_code_script}}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,7 +38,7 @@
 			
 			</form>
 
-			<p class="navbar-text pull-right">Logged in as {{username}}</p>
+			<p class="navbar-text pull-right">Hello, {{username}}</p>
 
   		<div class="container-fluid">
    		 <div class="navbar-header">
@@ -51,12 +52,12 @@
    		    		
    		 <form method="POST" action="buy">
 				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="BuyButton" class="btn btn-link">Buy</button>
+				<button id="BuyBtn" class="btn btn-link">Buy</button>
 		</form> 
    		
    		<form method="POST" action="sell">
 				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="SellButton" class="btn btn-link">Sell</button>
+				<button id="SellBtn" class="btn btn-link">Sell</button>
 		</form> 
 
    		<form method="POST" action="inbox">
@@ -85,15 +86,15 @@
 		<div align="center">
 
 			<div class="jumbotron">
-				<h1>Triton Textbook Exchange </h1>
 			</div>
+
 			<form method="POST" action="buy">
 				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="BuyButton" class="btn btn-primary btn-lg btn-block">Buy</button>
+				<button id="BuyButton" class="btn btn-primary btn-lg btn-block"><strong>B U Y</strong></button>
 			</form> <br>
 			<form method="POST" action="sell">
 				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="SellButton" class="btn btn-primary btn-lg btn-block">Sell</button>
+				<button id="SellButton" class="btn btn-primary btn-lg btn-block"><strong>S E L L</strong></button>
 			</form> <br>
 
 			<!--
