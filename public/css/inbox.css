@@ -1,32 +1,15 @@
-body{
-	background-color: #E2E4E5;
+h1 {
 	color: #434D53;
 	font-family: Tahoma, sans-serif;
 }
 
-h3{
-
-	color: #434D53;
-	font-family: Tahoma, sans-serif;
-}
-
-h5{
-	color: #434D53;
-	font-family: Tahoma, sans-serif;
-}
-
-.backbutton{
-    background: #F32515;
-    color: white;
-}
-
-#PostOfferButton{
+#NewMessageButton{
 	background: #F32515; 
-    padding: 7px 7px 7px; /*apply some padding inside the button*/
+    padding: 2px 2px 2px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     /*style the text*/
-    font-size:1.25em;
+    font-size:1.5em;
     font-family: Tahoma, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
     letter-spacing:.1em;
     text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
@@ -39,4 +22,15 @@ h5{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+
+.messagestable{
+	color: #434D53;
+	font-family: Tahoma, sans-serif;
+	border: 1.5px #F32515;
+}
+
+th {
+	background-color: #F32515;
+	color: white;
 }

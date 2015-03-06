@@ -8,6 +8,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
+	<link href="css/transactions.css" rel="stylesheet">
 		{{>tracking_code_script}}
 	<!-- this is a comment in HTML -->
 
@@ -78,12 +79,12 @@
 	<!--- NAVBAR END -->
 
 	<div align="left">
-		<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
+		<input type="button" class="btn btn-sm backbutton" onclick="history.back();"  value="Back"> 
 	</div>	
 
 	<input id="refresh-btn" type="submit" style="display: none;">
-	<h4 align="center">Purchases </h4>
-	<table class="data-grid table table-striped table-bordered">
+	<h3 align="center">Purchases </h3>
+	<table class="data-grid table table-striped table-bordered purchasestable">
 		<thead>
 			<tr>
 				<th></th>
@@ -104,10 +105,10 @@
 		    	</tr>
 			{{/each}}
 		</thead>
-	</table>
+	</table><br>
 
-	<h4 align="center">Sales </h4>
-	<table class="data-grid table table-striped table-bordered">
+	<h3 align="center">Sales </h3>
+	<table class="data-grid table table-striped table-bordered salestable">
 		<thead>
 			<tr>
 				<th></th>
@@ -128,10 +129,10 @@
 		    	</tr>
 			{{/each}}
 		</thead>
-	</table>
+	</table><br>
 
-	<h4 align="center">Pending sales</h4>
-	<table class="data-grid table table-striped table-bordered">
+	<h3 align="center">Pending sales</h3>
+	<table class="data-grid table table-striped table-bordered pendingsalestable">
 		<thead>
 			<tr>
 				<th></th>
