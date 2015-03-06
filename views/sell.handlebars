@@ -9,7 +9,8 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
 
-	{{> tracking_code_script}}
+	<link href="css/sell.css" rel="stylesheet">
+		{{>tracking_code_script}}
 
 	<!-- this is a comment in HTML -->
 
@@ -70,15 +71,17 @@
 	<!--- NAVBAR END -->
 
 	<div align="left">
-		<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
+		<input type="button" class="btn btn-sm backbutton" onclick="history.back();"  value="Back"> 
 	</div>	
 
 	<div align="center">
-		<h4> What book would you like to sell? </h4><br>
+		<h3> What book would you like to sell? </h3>
+		<h5><em>You don't have to input all the fields if you don't want to!</em></h5><br>
 		<form method="POST" action="insert_offer">
-			Title: <input type="text" name="title"> <br>
-			Author: <input type="text" name="author"> <br>
+			<div style="float:left"><h4>Title: </h4></div><div style="float:right"><input type="text" name="title"> </div><br><br>
+			<div style="float:left"><h4>Author: </h4></div><div style="float:right"><input type="text" name="author"></div> <br><br>
 			<input type="hidden" name="seller" value="{{username}}">
+<<<<<<< HEAD
 			ISBN: <input type="text" name="isbn"> <br>
 			Course: <input type="text" name="course"> <br>
 			Condition: <input type="text" name="condition"> <br>
@@ -95,6 +98,14 @@
 			 <input type="checkbox" name="saturday-checkbox" value="Saturday">Saturday <input type="text" name="saturday-av"><br>
 
 			Location: <select name="location">
+=======
+			<div style="float:left"><h4>ISBN: </h4></div><div style="float:right"><input type="text" name="isbn"></div> <br><br>
+			<div style="float:left"><h4>Course: </h4></div><div style="float:right"> <input type="text" name="course"></div><br> <br>
+			<div style="float:left"><h4>Condition: </h4></div><div style="float:right"><input type="text" name="condition"> </div><br><br>
+			<div style="float:left"><h4>Image URL: <h4></div><div style="float:right"><input type="text" name="imageurl"></div><br><br><br>
+			When can you meet up with your buyer?: <textarea name="availability" cols="30" rows="10"></textarea> <br><br>
+			Where do you want to meet up?: <br><select name="location">
+>>>>>>> master
 					     <option value="Price Center">Price Center</option>
 					     <option value="Police Station">Police Station</option>
 					     <option value="Geisel">Geisel</option>
@@ -102,9 +113,8 @@
 			          </select> <br>
 			<input type="hidden" name="username" value="{{username}}">
 			<button id="SendPost" style="display: none;"></button>
-			
 		</form>
-		<button id="PostOfferButton" class="btn btn-primary" onclick=confirmWindow()>Post Offer</button>
+		<br><button id="PostOfferButton" class="btn btn-primary" onclick=confirmWindow()>Post My Book!</button>
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
