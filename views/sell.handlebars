@@ -8,12 +8,9 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
-<<<<<<< HEAD
 
 	{{> tracking_code_script}}
-=======
-		{{>tracking_code_script}}
->>>>>>> master
+
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -137,10 +134,12 @@
 	function confirmWindow() {
 		var confirmed = confirm("Confirm post offer?");
 		if(confirmed) {
+
 			var leave_date = new Date();
 			var sec_spent = (leave_date.getTime() - load_date.getTime()) / 1000.0;
 			console.log("time spent on sell: " + sec_spent);
 			woopra.track("sell_time_spent",{"sec_spent" : sec_spent} );
+			$("#SendPost").click();
 		}
 	}
 </script>
