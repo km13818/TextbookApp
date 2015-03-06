@@ -44,16 +44,6 @@
       </button>
 
        <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-              
-       <form method="POST" action="buy">
-        <input type="hidden" name="username" value="{{username}}"> 
-        <button id="BuyBtn" class="btn btn-link">Buy</button>
-    </form> 
-      
-      <form method="POST" action="sell">
-        <input type="hidden" name="username" value="{{username}}"> 
-        <button id="SellBtn" class="btn btn-link">Sell</button>
-    </form> 
 
       <form method="POST" action="inbox">
         <input type="hidden" name="username" value="{{username}}"> 
@@ -110,7 +100,6 @@
                 <h4 class="modal-title">Send a message</h4>
             </div>
             <div class="modal-body" align="center">
-                To: <input type="text" name="modal-to" placeholder="Somebody"><br>
                 Subject: <input type="text" name="modal-subject"> <br>
                 <textarea name="modal-msg-text" cols="30" rows="10"></textarea> <br>
             </div>
