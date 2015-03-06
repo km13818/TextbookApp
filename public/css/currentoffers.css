@@ -1,16 +1,11 @@
-body{
-	background-color: #E2E4E5;
-}
-
 h1{
-
-	color: #434D53;
-	font-family: Tahoma, sans-serif;
+    color: #434D53;
+    font-family: Tahoma, sans-serif;
 }
 
-h4{
-	color: #434D53;
-	font-family: Tahoma, sans-serif;
+h4 {
+    color: #434D53;
+    font-family: Tahoma, sans-serif;
 }
 
 .backbutton{
@@ -18,37 +13,7 @@ h4{
     color: white;
 }
 
-.GoButton{
-	background: #F32515; 
-    padding: 5px 5px 5px; /*apply some padding inside the button*/
-    border:1px solid #000000; /*required or the default border for the browser will appear*/
-    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
-    /*style the text*/
-    font-size:1.2em;
-    font-family: Tahoma, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
-    letter-spacing:.1em;
-    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-    color: white;
-    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
-    -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    box-shadow: inset 0px 1px 0px #000000, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    /*give the corners a small curve*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-
-.GoButton:hover, .GoButton:focus{
-	color:#434D53;
-/*reduce the size of the shadow to give a pushed effect*/
--webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
--moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-box-shadow: inset 0px 1px 0px #000000, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-
-}
-
-#ViewAllOffersButton{
+.MessageSeller{
 	background: #F32515; 
     padding: 7px 7px 7px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
@@ -69,11 +34,23 @@ box-shadow: inset 0px 1px 0px #000000, 0px 2px 0px 0px #205c73, 0px 2px 5px #999
     border-radius: 10px;
 }
 
-#ViewAllOffersButton:hover, #ViewAllOffersButton:focus{
-	color:#434D53;
-/*reduce the size of the shadow to give a pushed effect*/
--webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
--moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-box-shadow: inset 0px 1px 0px #000000, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-
+.BuyThis{
+    background: #F32515; 
+    padding: 7px 7px 7px; /*apply some padding inside the button*/
+    border:1px solid #000000; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1.2em;
+    font-family: Tahoma, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: white;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #000000, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    /*give the corners a small curve*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }

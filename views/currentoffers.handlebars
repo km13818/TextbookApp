@@ -8,6 +8,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
+  <link href="css/currentoffers.css" rel="stylesheet">
     {{>tracking_code_script}}
 	<!-- this is a comment in HTML -->
 
@@ -78,7 +79,7 @@
   <!--- NAVBAR END -->
 
 	<div align="left">
-		<input type="button" class="btn btn-sm" onclick="history.back();"  value="Back"> 
+		<input type="button" class="btn btn-sm backbutton" onclick="history.back();"  value="Back"> 
 	</div>	
 
 	<br>
@@ -89,8 +90,8 @@
 		<div align="center" class="container">
           <div style="float:left"><img src="{{imageurl}}" height="200" width="100" />
           <p>
-            <button class="message-seller-btn btn btn-primary">Message Seller</button><br>
-            <button class="purchase-btn btn btn-primary">Buy This!</button><br></div>
+            <br><button class="message-seller-btn btn btn-primary MessageSeller">Message Seller</button><br><br>
+            <button class="purchase-btn btn btn-primary BuyThis">Buy This!</button><br></div>
             <b>Seller:</b> <div class="seller">{{seller}} </div><br>
             <b>Title:</b> <div class="title">{{title}}</div> <br>
             <b>Author:</b> <div class="author">{{author}}</div> <br>
