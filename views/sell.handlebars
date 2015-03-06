@@ -82,16 +82,18 @@
 	</div>	
 
 	<div align="center">
-		<h4> What book would you like to sell? </h4><br>
+		<h4> What book would you like to sell? </h4>
+		<h5><em>You don't have to input all the fields if you don't want to!</em></h5>
+		<div class="sellform">
 		<form method="POST" action="insert_offer">
-			Title: <input type="text" name="title"> <br>
-			Author: <input type="text" name="author"> <br>
+			<div style="float:left">Title: </div><div style="float:right"><input type="text" name="title"> </div><br><br>
+			<div style="float:left">Author: </div><div style="float:right"><input type="text" name="author"></div> <br><br>
 			<input type="hidden" name="seller" value="{{username}}">
-			ISBN: <input type="text" name="isbn"> <br>
-			Course: <input type="text" name="course"> <br>
-			Condition: <input type="text" name="condition"> <br>
-			Image URL: <input type="text" name="imageurl"> <br>
-			Meetup Availability: <textarea name="availability" cols="30" rows="10"></textarea> <br>
+			<div style="float:left">ISBN: </div><div style="float:right"><input type="text" name="isbn"></div> <br><br>
+			<div style="float:left">Course: </div><div style="float:right"> <input type="text" name="course"></div><br> <br>
+			<div style="float:left">Condition: </div><div style="float:right"><input type="text" name="condition"> </div><br><br>
+			<div style="float:left">Image URL: </div><div style="float:right"><input type="text" name="imageurl"></div><br><br>
+			When can you meet up with your buyer?: <textarea name="availability" cols="30" rows="10"></textarea> <br>
 			Location: <select name="location">
 					     <option value="Price Center">Price Center</option>
 					     <option value="Police Station">Police Station</option>
@@ -100,9 +102,9 @@
 			          </select> <br>
 			<input type="hidden" name="username" value="{{username}}">
 			<button id="SendPost" style="display: none;"></button>
-			
+		</div>
 		</form>
-		<button id="PostOfferButton" class="btn btn-primary" onclick=confirmWindow()>Post Offer</button>
+		<button id="PostOfferButton" class="btn btn-primary" onclick=confirmWindow()>Post My Book!</button>
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>

@@ -85,13 +85,13 @@
 		<h4><em>Search by: </em></h4>
 		<form method="POST" action="search_offers">
 				
-			<div style="float:left">Title: </div> <div style="float:right"><input type="text" name="title">  <button class="GoButton" >Go!</button></div><br><br>
+			<div style="float:left">Title: </div> <input type="text" name="title"><div style="float:right">  <button class="GoButton" >Go!</button></div><br><br>
 				
-			<div style="float:left">Author: </div><div style="float:right"><input type="text" name="author"> <button class="GoButton" >Go!</button></div><br><br>
+			<div style="float:left">Author: </div><input type="text" name="author"> <div style="float:right"><button class="GoButton" >Go!</button></div><br><br>
 				
-			<div style="float:left">ISBN: </div><div style="float:right"><input type="text" name="isbn"> <button class="GoButton" >Go!</button></div><br><br>
+			<div style="float:left">ISBN: </div><input type="text" name="isbn"> <div style="float:right"><button class="GoButton" >Go!</button></div><br><br>
 				
-			<div style="float:left">Course: </div><div style="float:right"><input type="text" name="course"> <button class="GoButton" >Go!</button></div><br><br>
+			<div style="float:left">Course: </div><input type="text" name="course"> <div style="float:right"><button class="GoButton" >Go!</button></div><br><br><br><br>
 
 
 			<input type="hidden" name="username" value="{{username}}"> 
@@ -100,7 +100,7 @@
 		</form>
 		<form method="POST" action="display_offers">
 			<input type="hidden" name="username" value="{{username}}"> 
-			<button id="ViewAllOffersButton" class="btn btn-primary" >View all offers</button>
+			<button id="ViewAllOffersButton" class="btn btn-primary" >See all posted books!</button>
 		</form>
 	<div>
 	<br>
