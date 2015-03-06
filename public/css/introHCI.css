@@ -15,14 +15,15 @@ body{
 
 .jumbotron {
 	position: relative;
-	/*background: url("../images/Textchange3.jpg");*/
+	background: url("../images/Textchange2.jpg") no-repeat center center;
+    background-size: 100% 100%;
 
 
 }
 
 .jumbotron:after {
      content:"";
-     /*background: url("../images/Textchange3.jpg");*/
+     background: url("../images/Textchange2.jpg");
      opacity: 0;
      top: 100;
      left: 100;
