@@ -4,7 +4,7 @@ h1 {
 }
 
 #NewMessageButton{
-	background: #F32515; 
+	background: #003366; 
     padding: 2px 2px 2px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
@@ -27,10 +27,14 @@ h1 {
 .messagestable{
 	color: #434D53;
 	font-family: Tahoma, sans-serif;
-	border: 1.5px #F32515;
+	border: 1.5px #003366;
 }
 
 th {
-	background-color: #F32515;
+	background-color: #003366;
 	color: white;
+}
+.backbutton{
+    background: #FFCC00;
+    color: white;
 }
