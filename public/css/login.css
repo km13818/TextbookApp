@@ -10,7 +10,7 @@
 }
 
 .jumbotron {
-    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    font-family: Tahoma, sans-serif;
     color: #ffffff;
 	position: relative;
 	background: none;
@@ -37,7 +37,7 @@
 }
 
 #content {
-     position:absolute;
+    position:absolute;
     width:780px;
     height:650px;
     left:50%;
@@ -53,7 +53,7 @@
 }
 
 body {
-    background-image: url("../images/Geisel.jpg");
+    background-image: url("../images/login2.jpg");
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -61,11 +61,58 @@ body {
 }
 
 h1{
- font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+ font-family: Tahoma, sans-serif;
 
 }
 
 div form{
 background-color: transparent;
 
+}
+
+h3 {
+    color: #000000;
+    font-family: Tahoma, sans-serif;
+}
+
+#loginbutton {
+    background: #003366; 
+    padding: 2px 2px 2px; /*apply some padding inside the button*/
+    border:1px solid #000000; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1em;
+    font-family: Tahoma, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: white;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #000000, 0px 5px 0px 0px #205c73, 0px 5px 5px #999;
+    /*give the corners a small curve*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#createaccountbutton {
+    background: #003366; 
+    padding: 2px 2px 2px; /*apply some padding inside the button*/
+    border:1px solid #000000; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:0.75em;
+    font-family: Tahoma, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: white;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    -webkit-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #000000, 0px 5px 0px 0px #205c73, 0px 5px 5px #999;
+    /*give the corners a small curve*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }

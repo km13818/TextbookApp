@@ -14,12 +14,12 @@ h4{
 }
 
 .backbutton{
-    background: #F32515;
+    background: #FFCC00;
     color: white;
 }
 
 .GoButton{
-	background: #F32515; 
+	background: #003366; 
     padding: 5px 5px 5px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
@@ -34,9 +34,9 @@ h4{
     -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
     box-shadow: inset 0px 1px 0px #000000, 0px 5px 0px 0px #205c73, 0px 5px 5px #999;
     /*give the corners a small curve*/
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .GoButton:hover, .GoButton:focus{
@@ -49,7 +49,7 @@ box-shadow: inset 0px 1px 0px #000000, 0px 2px 0px 0px #205c73, 0px 2px 5px #999
 }
 
 #ViewAllOffersButton{
-	background: #F32515; 
+	background: #003366; 
     padding: 7px 7px 7px; /*apply some padding inside the button*/
     border:1px solid #000000; /*required or the default border for the browser will appear*/
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
@@ -64,9 +64,9 @@ box-shadow: inset 0px 1px 0px #000000, 0px 2px 0px 0px #205c73, 0px 2px 5px #999
     -moz-box-shadow: inset 0px 1px 0px #F9E559, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
     box-shadow: inset 0px 1px 0px #000000, 0px 5px 0px 0px #205c73, 0px 5px 5px #999;
     /*give the corners a small curve*/
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 #ViewAllOffersButton:hover, #ViewAllOffersButton:focus{
