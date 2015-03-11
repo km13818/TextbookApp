@@ -25,17 +25,10 @@
 			<div style="float:left"><h4>Course: </h4></div><div style="float:right"> <input type="text" name="course"></div><br> <br>
 			<div style="float:left"><h4>Condition: </h4></div><div style="float:right"><input type="text" name="condition"> </div><br><br>
 			<div style="float:left"><h4>Image URL: <h4></div><div style="float:right"><input type="text" name="imageurl"></div><br><br>
-			<div style="float:left"><h4>Selling Price: <h4></div><div style="float:right"><input type="text" name="sellprice"></div><br><br><br>
+			<div style="float:left"><h4>Asking Price: <h4></div><div style="float:right"><input type="text" name="price"></div><br><br><br>
 
 			When can you meet up with your buyer?<br>
-		<!--	 <input type="checkbox" name="sunday-checkbox" value="Sunday">Sunday  <input type="text" name="sunday-av"> <br>
-			 <input type="checkbox" name="monday-checkbox" value="Monday">Monday <input type="text" name="monday-av"><br>
-			 <input type="checkbox" name="tuesday-checkbox" value="Tuesday">Tuesday <input type="text" name="tuesday-av"><br>
-			 <input type="checkbox" name="wednesday-checkbox" value="Wednesday">Wednesday <input type="text" name="wednesday-av"><br>
-			 <input type="checkbox" name="thursday-checkbox" value="Thursday">Thursday <input type="text" name="thursday-av"><br>
-			 <input type="checkbox" name="friday-checkbox" value="Friday">Friday <input type="text" name="friday-av"><br>
-			 <input type="checkbox" name="saturday-checkbox" value="Saturday">Saturday <input type="text" name="saturday-av"><br>
--->
+
 			Location: <select name="location">
 					     <option value="Price Center">Price Center</option>
 					     <option value="Police Station">Police Station</option>
@@ -80,8 +73,6 @@
 				    	<td><input type="text" name="saturday-av"></td>		    	
 				    </tr>
 			</table> 
-
-
 			<button id="SendPost" style="display: none;"></button>
 		</form>
 		<br><button id="PostOfferButton" class="btn btn-success" onclick=confirmWindow()>Post My Book!</button>
@@ -89,26 +80,14 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/introHCI.js"></script>
-
 </div>
 </body>
-
-
-
 </html>
+
 <script>
-	var load_date;
-	$(document).ready(function() {
-		load_date = new Date();
-	});
 	function confirmWindow() {
 		var confirmed = confirm("Confirm post offer?");
 		if(confirmed) {
-/*
-			var leave_date = new Date();
-			var sec_spent = (leave_date.getTime() - load_date.getTime()) / 1000.0;
-			console.log("time spent on sell: " + sec_spent);
-			woopra.track("sell_time_spent",{"sec_spent" : sec_spent} );*/
 			$("#SendPost").click();
 		}
 	}

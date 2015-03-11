@@ -17,7 +17,8 @@ var OffersSchema = new Mongoose.Schema({
 	"condition": String,
 	"imageurl": String,
 	"location": String,		
-	"availability": String
+	"availability": String,
+	"price": String
 });
 
 var TransactionSchema = new Mongoose.Schema({

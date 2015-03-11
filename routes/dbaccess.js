@@ -252,6 +252,7 @@ exports.insertOffer = function(req, res) {
   var condition = req.param('condition');
   var imageurl = req.param('imageurl');
   var location = req.param('location');
+  var price = req.param('price');
   var availability = "";  
 
   var sunday = req.param('sunday-checkbox');
@@ -297,7 +298,8 @@ exports.insertOffer = function(req, res) {
     "imageurl": imageurl,
     "condition": condition,
     "location": location,   
-    "availability": availability
+    "availability": availability,
+    "price": price
   });
 
   newOffer.save(afterSaving);
