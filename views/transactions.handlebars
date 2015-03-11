@@ -58,7 +58,7 @@
 		        	<td><div class="title">{{title}}</div> </td> 
 		        <!--	<div class="seller" style="display:none;"> {{seller}} </div>-->
 		        	<td><div class="buyer">{{buyer}}</div></td> 
-		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
+		        	<td><div class="isbn">{{isbn}}</div> </td> 
 		        	<td><button class="new-msg-btn btn btn-primary messagingbutton">
 		        		Message</button></td>
 		    	</tr>
@@ -77,8 +77,8 @@
 			{{#each pendingsales}}
 				<tr>
 					<td><img src="images/delete-icon.png" class="delete-pending-sale-icon"></td>
-		        	<td>{{title}}</td> 
-		        	<td>{{isbn}}</td> 
+		        	<td><div class="title">{{title}}</div></td> 
+		        	<td><div class="isbn">{{isbn}}</div></td> 
 		    	</tr>
 			{{/each}}
 		</thead>
@@ -95,7 +95,7 @@
 	                Delete this transaction?
 	            </div>
 	            <div class="modal-footer">
-	                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 	                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=deleteTransaction()>Yes</button>
 	            </div>
 	        </div>
@@ -112,7 +112,7 @@
 	                Delete this pending sale?
 	            </div>
 	            <div class="modal-footer">
-	                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 	                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=deleteOffer()>Yes</button>
 	            </div>
 	        </div>
@@ -130,7 +130,7 @@
 	                <textarea name="modal-msg-text" cols="30" rows="10"></textarea> <br>
 	            </div>
 	            <div class="modal-footer">
-	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 	                <button type="button" class="btn btn-primary" data-dismiss="modal">Send!</button>
 	            </div>
 	        </div>

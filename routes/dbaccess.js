@@ -235,6 +235,7 @@ exports.makeTransaction = function(req,res){
     .exec(afterDelete);
   }
   function afterDelete(err, retJson) {
+      console.log("transaction deleted.");
       if(err) console.log(err);
       res.send();
   }
