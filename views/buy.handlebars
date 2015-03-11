@@ -2,65 +2,12 @@
 
 <html>
 <head>
-	<title>Textbook App</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/buy.css" rel="stylesheet">
-	<!-- this is a comment in HTML -->
-
-	{{>tracking_code_script}}     
+{{> header_code}}
 </head>
-
 <body>
 
 	<div class=container>
-
-	<!--- NAVBAR -->
-	<nav class="navbar navbar-default">
-
-			<form method="POST" action="index">
-				<input type="hidden" name="username" value="{{username}}"> 
-				<button type="IndexButton" class="btn btn-default pull-right">
-  				<span class="glyphicon glyphicon-home"></span>
-				</button>
-			</form>
-
-			<p class="navbar-text pull-right">Hello, {{username}}</p>
-
-  		<div class="container-fluid">
-   		 <div class="navbar-header">
-
-       <div class="dropdown pull-left">
- 		 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-   		 <span class="glyphicon glyphicon-align-justify"></span>
-  		</button>
-
-  	 	 <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-
-   		<form method="POST" action="inbox">
-				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="InboxButton" class="btn btn-link">Messages</button>
-		</form>
-
-    	<form method="POST" action="transactions">
-				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="InboxButton" class="btn btn-link">My Offers/Transactions</button>
-		</form>
-
-    	<li class="divider"></li>
-		<form method="GET" action="/">
-		<button id="Logout" class="btn btn-link">Logout</button><br>
-		</form>
- 		</ul>
-
- 				</div>
-    		</div>
-  		</div>
-	</nav>
-	<!--- NAVBAR END -->
-
+		{{>navbar_code}}
 	<div align="left">
 		<input type="button" class="btn btn-sm backbutton" onclick="history.back();"  value="Back"> 
 	</div>	

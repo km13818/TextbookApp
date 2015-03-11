@@ -2,72 +2,13 @@
 
 <html>
 <head>
-	<title>Textbook App</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/introHCI.css" rel="stylesheet">
-	<link href="css/transactions.css" rel="stylesheet">
-		{{>tracking_code_script}}
-	<!-- this is a comment in HTML -->
-	{{> tracking_code_script}}
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->        
+{{> header_code}}
 </head>
-
 <body>
 <div id="username" style="display:none;">{{username}}</div>
 <div class=container>
 
-	<!--- NAVBAR -->
-	<nav class="navbar navbar-default">
-
-			<form method="POST" action="index">
-				<input type="hidden" name="username" value="{{username}}">
-				<button type="IndexButton" class="btn btn-default pull-right">
-  				<span class="glyphicon glyphicon-home"></span>
-				</button>
-			</form>
-
-			<p class="navbar-text pull-right">Hello, {{username}}</p>
-
-  		<div class="container-fluid">
-   		 <div class="navbar-header">
-
-       <div class="dropdown pull-left">
- 		 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-   		 <span class="glyphicon glyphicon-align-justify"></span>
-  		</button>
-
-  	 	 <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-   		    		
-
-   		<form method="POST" action="inbox">
-				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="InboxButton" class="btn btn-link">Messages</button>
-		</form>
-
-    	<form method="POST" action="transactions">
-				<input type="hidden" name="username" value="{{username}}"> 
-				<button id="InboxButton" class="btn btn-link">My Offers/Transactions</button>
-		</form>
-
-    	<li class="divider"></li>
-		<form method="GET" action="/">
-		<button id="Logout" class="btn btn-link">Logout</button><br>
-		</form>
- 		</ul>
-
- 				</div>
-    		</div>
-  		</div>
-	</nav>
-	<!--- NAVBAR END -->
+{{>navbar_code}}
 
 	<div align="left">
 		<input type="button" class="btn btn-sm backbutton" onclick="history.back();"  value="Back"> 
@@ -75,14 +16,14 @@
 
 	<input id="refresh-btn" type="submit" style="display: none;">
 	<h3 align="center">Purchases </h3>
-	<table class="data-grid table table-striped table-bordered purchasestable">
+	<table class="data-grid table table-striped table-bordered">
 		<thead>
 			<tr>
-				<th></th>
-				<th> Title </th>
-				<th> Seller </th>
-				<th> ISBN </th>
-				<th></th>
+				<th style="width: 100px;"></th>
+				<th style="width: 100px;"> Title </th>
+				<th style="width: 100px;"> Seller </th>
+				<th style="width: 100px;"> ISBN </th>
+				<th style="width: 100px;"></th>
 			</tr>
 			{{#each purchases}}
 				<tr>
@@ -95,18 +36,21 @@
 		        		Message</button></td>
 		    	</tr>
 			{{/each}}
+
 		</thead>
+
+
 	</table><br>
 
 	<h3 align="center">Sales </h3>
-	<table class="data-grid table table-striped table-bordered salestable">
+	<table class="data-grid table table-striped table-bordered" style="width:100%;">
 		<thead>
 			<tr>
-				<th></th>
-				<th> Title </th>
-				<th> Buyer </th>
-				<th> ISBN </th>
-				<th></th>
+				<th style="width: 100px;"></th>
+				<th style="width: 100px;"> Title </th>
+				<th style="width: 100px;"> Buyer </th>
+				<th style="width: 100px;"> ISBN </th>
+				<th style="width: 100px;"></th>
 			</tr>
 			{{#each sales}}
 				<tr>
@@ -123,23 +67,18 @@
 	</table><br>
 
 	<h3 align="center">Pending sales</h3>
-	<table class="data-grid table table-striped table-bordered pendingsalestable">
+	<table class="data-grid table table-striped table-bordered">
 		<thead>
 			<tr>
 				<th></th>
 				<th> Title </th>
 				<th> ISBN </th>
-				<th> Location </th>
-				<th> Availability </th>
-				<th></th>
 			</tr>
 			{{#each pendingsales}}
 				<tr>
 					<td><img src="images/delete-icon.png" class="delete-pending-sale-icon"></td>
-		        	<td><div class="title">{{title}}</div> </td> 
-		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
-		        	<td><div class="location">{{location}}</div> </td> 
-		        	<td><div class="availability">{{availability}}</div></td> 
+		        	<td>{{title}}</td> 
+		        	<td>{{isbn}}</td> 
 		    	</tr>
 			{{/each}}
 		</thead>

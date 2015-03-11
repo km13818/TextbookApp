@@ -1,0 +1,45 @@
+	<!--- NAVBAR -->
+	<nav class="navbar navbar-default">
+
+			<form method="POST" action="index">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button type="IndexButton" class="btn btn-default pull-right">
+  				<span class="glyphicon glyphicon-home"></span>
+
+  			</button>
+			
+			</form>
+
+			<p class="navbar-text pull-right">Hello, {{username}}</p>
+
+  		<div class="container-fluid">
+   		 <div class="navbar-header">
+
+       <div class="dropdown pull-left">
+ 		 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+   		 <span class="glyphicon glyphicon-align-justify"></span>
+  		</button>
+
+  	 	 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+   		<form method="POST" action="inbox">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="InboxButton" class="btn-primary">Messages</button>
+		</form>
+
+    	<form method="POST" action="transactions">
+				<input type="hidden" name="username" value="{{username}}"> 
+				<button id="InboxButton" class="btn-primary">My Offers/Transactions</button>
+		</form>
+
+    	<li class="divider"></li>
+		<form method="GET" action="/">
+		<button id="Logout" class="btn-primary">Logout</button><br>
+		</form>
+ 		</ul>
+
+ 				</div>
+    		</div>
+  		</div>
+	</nav>
+	<!--- NAVBAR END -->
