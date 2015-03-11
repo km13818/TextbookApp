@@ -23,6 +23,7 @@
 				<th style="width: 100px;"> Title </th>
 				<th style="width: 100px;"> Seller </th>
 				<th style="width: 100px;"> ISBN </th>
+				<th style="width: 100px;"> Price </th>
 				<th style="width: 100px;"></th>
 			</tr>
 			{{#each purchases}}
@@ -32,6 +33,7 @@
 		        <!--	<div class="buyer" style="display:none;"> {{buyer}} </div>-->
 		        	<td><div class="seller">{{seller}}</div></td> 
 		        	<td><div class="isbn">{{isbn}}</isbn> </td> 
+		        	<td><div class="isbn">{{sellprice}}</isbn> </td> 
 		        	<td><button class="new-msg-btn btn btn-primary messagingbutton">
 		        		Message</button></td>
 		    	</tr>
@@ -50,6 +52,7 @@
 				<th style="width: 100px;"> Title </th>
 				<th style="width: 100px;"> Buyer </th>
 				<th style="width: 100px;"> ISBN </th>
+				<th style="width: 100px;"> Price </th>
 				<th style="width: 100px;"></th>
 			</tr>
 			{{#each sales}}
@@ -59,6 +62,7 @@
 		        <!--	<div class="seller" style="display:none;"> {{seller}} </div>-->
 		        	<td><div class="buyer">{{buyer}}</div></td> 
 		        	<td><div class="isbn">{{isbn}}</div> </td> 
+		        	<td><div class="isbn">{{sellprice}}</div> </td>
 		        	<td><button class="new-msg-btn btn btn-primary messagingbutton">
 		        		Message</button></td>
 		    	</tr>
@@ -73,12 +77,14 @@
 				<th></th>
 				<th> Title </th>
 				<th> ISBN </th>
+				<th> Price </th>
 			</tr>
 			{{#each pendingsales}}
 				<tr>
 					<td><img src="images/delete-icon.png" class="delete-pending-sale-icon"></td>
 		        	<td><div class="title">{{title}}</div></td> 
 		        	<td><div class="isbn">{{isbn}}</div></td> 
+		        	<td><div class="isbn">{{sellprice}}</div></td> 
 		    	</tr>
 			{{/each}}
 		</thead>
